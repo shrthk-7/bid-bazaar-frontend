@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styles from "./style.module.scss";
 
 const Error = () => {
@@ -10,7 +10,7 @@ const Error = () => {
         <p>Page Not Found</p>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Error
+export default Error;

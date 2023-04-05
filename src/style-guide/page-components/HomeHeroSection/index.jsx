@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styles from "./style.module.scss";
 import { BsXDiamondFill } from "react-icons/bs";
 
@@ -11,8 +11,13 @@ const HomeHeroSection = () => {
       <div className={styles.heroRings3}></div>
       <div className={styles.heroUpperSection}>
         <div className={styles.heroDataSection}>
-          <h1>Discover new possiblities<sup>&trade;</sup> </h1>
-          <p>World's largest marketplace for seller and bidder with zero fraud policy</p>
+          <h1>
+            Discover new possiblities<sup>&trade;</sup>{" "}
+          </h1>
+          <p>
+            World's largest marketplace for seller and bidder with zero fraud
+            policy
+          </p>
           <div className={styles.activeData}>
             <div className={styles.activeDataRow}>
               <div className={styles.activeDataBigText}>
@@ -35,7 +40,7 @@ const HomeHeroSection = () => {
         
       </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default HomeHeroSection
+export default HomeHeroSection;
