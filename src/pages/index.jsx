@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import Spinner from "@/style-guide/components/spinner";
+import HomeHeroSection from "@/style-guide/page-components/HomeHeroSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Spinner/>
+        <HomeHeroSection />
       </main>
     </>
   );
