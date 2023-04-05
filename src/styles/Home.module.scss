@@ -3,7 +3,10 @@
 
 .main {
   @include mixins.flexCenter;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
 }
 
 /* Enable hover only on non-touch devices */
