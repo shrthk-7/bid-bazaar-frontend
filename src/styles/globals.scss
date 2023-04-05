@@ -1,0 +1,27 @@
+
+// @forward "src/styles/globals.scss" as list-*;
+// @import url("/variable.scss");
+@media (prefers-color-scheme: dark) {
+  :root{
+    --primary-color-1:rgb(63, 59, 108);
+    --primary-color-2:rgb(98, 79, 130);
+    --primary-color-3:rgb(159, 115, 171);
+    --primary-color-4:rgb(163, 199, 214);
+    --spinner-bg:rgba(63, 59, 108,0.5);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root{
+    --primary-color-1:rgb(250, 248, 241);
+    --primary-color-2:rgb(250, 234, 177);
+    --primary-color-3:rgb(229, 186, 115);
+    --primary-color-4:rgb(197, 137, 64);
+    --spinner-bg:rgba(250, 248, 241,0.5);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
