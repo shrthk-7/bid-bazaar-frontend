@@ -1,6 +1,6 @@
 @use "../../../styles/mixins.scss";
 
-.navbar{
+.navbar {
   @include mixins.flexCenter;
   z-index: 5;
   position: absolute;
@@ -12,13 +12,13 @@
   padding: 1rem 1.5rem;
   justify-content: space-between !important;
   color: var(--white);
-  .logo{
+  .logo {
     font-size: 1.3rem;
   }
 
-  .nav_links{
+  .nav_links {
     @include mixins.flexCenter;
-    a{
+    a {
       text-decoration: none;
       margin: 0 1.5rem;
       color: var(--white);
@@ -26,8 +26,12 @@
   }
 }
 
-.btn{
+.btn {
   padding: 0.5rem 1rem;
-  background: radial-gradient(circle at bottom right,rgb(95, 30, 148),rgb(153, 85, 207));;
+  background: radial-gradient(
+    circle at bottom right,
+    rgb(95, 30, 148),
+    rgb(153, 85, 207)
+  );
   border-radius: 0.3rem;
 }

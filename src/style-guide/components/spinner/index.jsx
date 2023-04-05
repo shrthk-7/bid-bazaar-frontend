@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styles from "./style.module.scss";
 
 const Spinner = () => {
@@ -6,7 +6,7 @@ const Spinner = () => {
     <div className={styles.loader_container}>
       <div className={styles.spinner}></div>
     </div>
-  )
-}
+  );
+};
 
-export default Spinner
+export default Spinner;
