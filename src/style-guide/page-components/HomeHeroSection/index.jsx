@@ -12,7 +12,7 @@ const HomeHeroSection = () => {
       <div className={styles.heroUpperSection}>
         <div className={styles.heroDataSection}>
           <h1>
-            Discover new possiblities<sup>&trade;</sup>{" "}
+            Discover new possibilities<sup>&trade;</sup>{" "}
           </h1>
           <p>
             World's largest marketplace for seller and bidder with zero fraud

@@ -1,0 +1,84 @@
+.container {
+  background: var(--heroSection-bg1);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .box {
+    width: 23vw;
+    margin: 0.5vw;
+    margin-bottom: 2vw;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    .image {
+      width: 20vw;
+      height: 21vw;
+      border: 1px solid var(--heroSection-bg2);
+      border-radius: 10px;
+    }
+
+    .title {
+      padding-left: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background: var(--card-bg1);
+      color: white;
+      font-family: "Anton", sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .owner {
+      padding-left: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background: var(--card-bg1);
+      font-family: "Anton", sans-serif;
+      font-weight: bold;
+      color: white;
+    }
+
+    .bid {
+      padding-left: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background: var(--card-bg1);
+      color: var(--card-bg2);
+      border-bottom: 0.1px solid grey;
+      font-family: "Anton", sans-serif;
+    }
+
+    .active {
+      background: var(--card-bg1);
+      padding-left: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .live {
+      padding: 2px;
+      color: red;
+    }
+
+    .like {
+      background: var(--card-bg1);
+    }
+
+    .reputation {
+      padding-right: 3px;
+      color: white;
+    }
+
+    .owner_name {
+      color: var(--card-bg2);
+    }
+  }
+}
+
+@media screen {
+}
