@@ -22,6 +22,8 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     border: 2px solid var(--hero-ring-light);
+    box-shadow: 0px 2px 7px 7px black;
+    animation: ringShadowAnimation 2s ease-in-out infinite alternate;
     // animation: hero_ring_motion 2s infinite linear alternate;
   }
   .heroRings2 {
@@ -29,12 +31,14 @@
     height: 40rem !important;
     width: 40rem !important;
     opacity: 0.8 !important;
+    animation-delay: 0.66s;
   }
   .heroRings3 {
     @extend .heroRings1;
     height: 50rem !important;
     width: 50rem !important;
     opacity: 0.6 !important;
+    animation-delay: 1.2s;
   }
 
   .heroBloblight {
@@ -121,5 +125,14 @@
     // height: 50rem !important;
     // width: 50rem !important;
     transform: scale(1.5);
+  }
+}
+
+@keyframes ringShadowAnimation{
+  0%{
+    box-shadow: unset;
+  }
+  100%{
+    box-shadow: 0px 2px 10px 10px black;
   }
 }
