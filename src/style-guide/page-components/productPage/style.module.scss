@@ -59,6 +59,13 @@
           opacity: 0.8;
           border: 1px solid var(--white);
           border-radius: 0.5rem;
+          margin-right: 1rem;
+        }
+        .live{
+          background: goldenrod
+        }
+        .ended{
+          background: red
         }
       }
       .owner {
