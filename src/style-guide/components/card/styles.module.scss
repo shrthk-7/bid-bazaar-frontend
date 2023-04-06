@@ -21,6 +21,7 @@
 
     .image {
       width: 17rem;
+      object-fit: cover;
       height: 18rem;
       border: 1px solid var(--heroSection-bg2);
       border-radius: 1rem;
