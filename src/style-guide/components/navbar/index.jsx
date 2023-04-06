@@ -1,14 +1,13 @@
 import React from "react";
 import styles from "./style.module.scss";
-// import { signInWithGoogle } from "@/utils/firebase";
+import { signInWithGoogle } from "@/utils/firebase";
 
 const Navbar = ({ mobileHamClicked }) => {
   return (
     <div className={styles.navWrapper}>
       <div
-        className={`${styles.navbar} ${
-          mobileHamClicked ? styles.navShow : styles.navHide
-        }`}
+        className={`${styles.navbar} ${mobileHamClicked ? styles.navShow : styles.navHide
+          }`}
       >
         <div className={styles.logo}>BIDBAZZAR</div>
         <div className={styles.nav_links}>
