@@ -1,13 +1,16 @@
 @use "../../../styles/mixins.scss";
-.heroSection{
+.heroSection {
   @include mixins.flexCenter;
   height: 100vh;
   width: 100vw;
-  background: radial-gradient(circle at 77vw 50vh,var(--heroSection-bg2
-  ),var(--heroSection-bg1)40%);
+  background: radial-gradient(
+    circle at 77vw 50vh,
+    var(--heroSection-bg2),
+    var(--heroSection-bg1) 40%
+  );
   overflow: hidden !important;
 
-  .heroRings1{
+  .heroRings1 {
     // @include mixins.flexCenter;
     // transform-origin: 100% 5%;
     transform-origin: center center;
@@ -16,36 +19,40 @@
     left: 77vw;
     height: 30rem;
     width: 30rem;
-    transform: translate(-50%,-50%);
-    border-radius:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
     border: 2px solid var(--hero-ring-light);
     // animation: hero_ring_motion 2s infinite linear alternate;
   }
-  .heroRings2{
+  .heroRings2 {
     @extend .heroRings1;
     height: 40rem !important;
     width: 40rem !important;
   }
-  .heroRings3{
+  .heroRings3 {
     @extend .heroRings1;
     height: 50rem !important;
     width: 50rem !important;
   }
 
-  .heroBloblight{
+  .heroBloblight {
     position: absolute;
     top: 0;
     left: 0;
     height: 30rem;
     width: 30rem;
-    background: radial-gradient(circle at top left,var(--heroSection-bg2),transparent 40%);
+    background: radial-gradient(
+      circle at top left,
+      var(--heroSection-bg2),
+      transparent 40%
+    );
   }
-  .heroUpperSection{
+  .heroUpperSection {
     @include mixins.flexCenter;
     height: 100vh;
     width: 100vw;
     z-index: 2;
-    .heroDataSection{
+    .heroDataSection {
       @include mixins.flexCenter;
       flex-direction: column;
       align-items: flex-start;
@@ -53,62 +60,62 @@
       width: 60%;
       color: var(--white);
 
-      h1{
+      h1 {
         font-size: 6rem;
-        font-family: 'Anton', sans-serif;
+        font-family: "Anton", sans-serif;
         font-weight: 900;
         color: var(--white);
         width: 17ch;
       }
-      .activeData{
+      .activeData {
         margin-top: 3rem;
         @include mixins.flexCenter;
         flex-direction: column;
         gap: 2rem;
 
-        .activeDataRow{
+        .activeDataRow {
           font-weight: 100;
-          font-size:0.8rem;
-          .activeDataBigText{
-            font-size:1.2rem !important;
+          font-size: 0.8rem;
+          .activeDataBigText {
+            font-size: 1.2rem !important;
             font-weight: 700;
-            .bullets{
+            .bullets {
               color: var(--hero-ring-light);
             }
           }
         }
       }
     }
-    img{
+    img {
       height: 40rem;
       z-index: 2;
     }
   }
 }
 
-@media (max-width: 768px){
-  .heroSection{
-    .heroUpperSection{
-      .heroDataSection{
+@media (max-width: 768px) {
+  .heroSection {
+    .heroUpperSection {
+      .heroDataSection {
         width: 40%;
-        h1{
+        h1 {
           font-size: 2rem;
         }
       }
-      img{
+      img {
         height: 15rem;
       }
     }
   }
 }
 
-@keyframes hero_ring_motion{
-  0%{
+@keyframes hero_ring_motion {
+  0% {
     // height: 0 !important;
     // width: 0 !important;
     transform: scale(1);
   }
-  100%{
+  100% {
     // height: 50rem !important;
     // width: 50rem !important;
     transform: scale(1.5);

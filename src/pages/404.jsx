@@ -1,10 +1,8 @@
-import React from 'react';
-import Error from '@/style-guide/page-components/Error';
+import React from "react";
+import Error from "@/style-guide/page-components/Error";
 
 const Index = () => {
-  return (
-    <Error/>
-  )
-}
+  return <Error />;
+};
 
-export default Index
+export default Index;
