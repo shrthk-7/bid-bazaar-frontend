@@ -28,11 +28,13 @@
     @extend .heroRings1;
     height: 40rem !important;
     width: 40rem !important;
+    opacity: 0.8 !important;
   }
   .heroRings3 {
     @extend .heroRings1;
     height: 50rem !important;
     width: 50rem !important;
+    opacity: 0.6 !important;
   }
 
   .heroBloblight {
