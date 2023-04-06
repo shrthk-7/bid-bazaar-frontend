@@ -3,61 +3,60 @@ import slides from "../../../../mock.json";
 import style from "./styles.module.scss";
 import { AiFillHeart } from "react-icons/ai";
 
-export default function Card() {
+export default function Card({ slides }) {
   const [isClicked, setIsClicked] = useState(false);
   const [color, setColor] = useState("grey");
-  // const [value, setValue] = useState(value);
+  const [value, setValue] = useState(slides.reputation);
   const handleClick = () => {
     setIsClicked(!isClicked);
     setColor(isClicked ? "grey" : "white");
-    // if (isClicked) {
-    //   setValue(value - 1);
-    // } else {
-    //   setValue(value + 1);
-    // }
-    // setIsClicked(!isClicked);
+    if (isClicked) {
+      setValue((value) => value - 1);
+    } else {
+      setValue((value) => value + 1);
+    }
   };
   return (
     <div className={style.container}>
-      {slides.map((slide) => (
-        <div className={style.box}>
-          <img className={style.image} src={slide.photo}></img>
-          <div className={style.title}>
-            <b>{slide.title}</b>
-          </div>
-          <div className={style.owner}>
-            <b style={{ color: "grey" }}>Owner: </b>
-            <span className={style.owner_name}>{slide.owner.name}</span>
-          </div>
-          <div className={style.bid}>
-            <b style={{ color: "grey" }}>Current Highest Bid: </b>{" "}
-            {slide.current_highest_bid.currency}
-            {slide.current_highest_bid.amount}{" "}
-          </div>
-          <div className={style.active}>
-            {slide.live ? (
-              <b className={style.live} style={{ color: "green" }}>
-                LIVE{" "}
-              </b>
-            ) : (
-              <b className={style.live}>EXPIRED</b>
-            )}
-            <>
-              <span className={style.reputation}>
-                {" "}
-                <button
-                  className={style.like}
-                  onClick={handleClick}
-                  style={{ color: color }}
-                >
-                  <AiFillHeart />
-                </button>
-                {slide.reputation}
-              </span>
-            </>
-          </div>
+      <div className={style.box}>
+        <img className={style.image} src={slides.photo}></img>
+        <div className={style.title}>
+          <b>{slides.title}</b>
         </div>
-      ))}
+        <div className={style.owner}>
+          <b style={{ color: "var(--primary-color-3)" }}>Owner: </b>
+          <span className={style.owner_name}>{slides.owner.name}</span>
+        </div>
+        <div className={style.bid}>
+          <b style={{ color: "var(--primary-color-3)" }}>
+            Current Highest Bid:{" "}
+          </b>{" "}
+          {slides.current_highest_bid.currency}
+          {slides.current_highest_bid.amount}{" "}
+        </div>
+        <div className={style.active}>
+          {slides.live ? (
+            <b className={style.live} style={{ color: "green" }}>
+              LIVE{" "}
+            </b>
+          ) : (
+            <b className={style.live}>EXPIRED</b>
+          )}
+          <>
+            <span className={style.reputation}>
+              {" "}
+              <button
+                className={style.like}
+                onClick={handleClick}
+                style={{ color: color }}
+              >
+                <AiFillHeart />
+              </button>
+              {value}
+            </span>
+          </>
+        </div>
+      </div>
     </div>
   );
 }
