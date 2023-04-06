@@ -1,22 +1,28 @@
 lockfileVersion: 5.4
 
 specifiers:
+  chart.js: ^4.2.1
   firebase: ^9.19.1
   next: 13.2.4
   prettier: ^2.8.7
   react: 18.2.0
+  react-chartjs-2: ^5.2.0
   react-dom: 18.2.0
   react-icons: ^4.8.0
   sass: ^1.60.0
+  swiper: ^9.2.0
 
 dependencies:
+  chart.js: 4.2.1
   firebase: 9.19.1
   next: 13.2.4_5y7qh6ykubtj2qr2evk3di7hpa
   prettier: 2.8.7
   react: 18.2.0
+  react-chartjs-2: 5.2.0_t5yjg6ab35jnsudnh2qdighszm
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
   sass: 1.60.0
+  swiper: 9.2.0
 
 packages:
   /@firebase/analytics-compat/0.2.5_6l4s2ujtyqmvujqzso5tinyg5m:
@@ -635,6 +641,13 @@ packages:
       yargs: 16.2.0
     dev: false
 
+  /@kurkle/color/0.3.2:
+    resolution:
+      {
+        integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==,
+      }
+    dev: false
+
   /@next/env/13.2.4:
     resolution:
       {
@@ -946,6 +959,16 @@ packages:
       {
         integrity: sha512-iaIZ8gVrWfemh5DG3T9/YqarVZoYf0r188IjaGwx68j4Pf0SGY6CQkmJUIE+NZHkkecQGohzXmBGEwWDr9aM3Q==,
       }
+    dev: false
+
+  /chart.js/4.2.1:
+    resolution:
+      {
+        integrity: sha512-6YbpQ0nt3NovAgOzbkSSeeAQu/3za1319dPUQTXn9WcOpywM8rGKxJHrhS8V8xEkAlk8YhEfjbuAPfUyp6jIsw==,
+      }
+    engines: { pnpm: ^7.0.0 }
+    dependencies:
+      "@kurkle/color": 0.3.2
     dev: false
 
   /chokidar/3.5.3:
@@ -1368,6 +1391,19 @@ packages:
       long: 5.2.1
     dev: false
 
+  /react-chartjs-2/5.2.0_t5yjg6ab35jnsudnh2qdighszm:
+    resolution:
+      {
+        integrity: sha512-98iN5aguJyVSxp5U3CblRLH67J8gkfyGNbiK3c+l1QI/G4irHMPQw44aEPmjVag+YKTyQ260NcF82GTQ3bdscA==,
+      }
+    peerDependencies:
+      chart.js: ^4.1.1
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      chart.js: 4.2.1
+      react: 18.2.0
+    dev: false
+
   /react-dom/18.2.0_react@18.2.0:
     resolution:
       {
@@ -1457,6 +1493,13 @@ packages:
     engines: { node: ">=0.10.0" }
     dev: false
 
+  /ssr-window/4.0.2:
+    resolution:
+      {
+        integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==,
+      }
+    dev: false
+
   /string-width/4.2.3:
     resolution:
       {
@@ -1497,6 +1540,16 @@ packages:
     dependencies:
       client-only: 0.0.1
       react: 18.2.0
+    dev: false
+
+  /swiper/9.2.0:
+    resolution:
+      {
+        integrity: sha512-lWK9toYumUQss+YuTL+Mt0+8twiMJEyzioER4bbS4rrGHlkeLrDM8uhtAmnpdijELrNscuNUujDgKoMQZfQGlQ==,
+      }
+    engines: { node: ">= 4.7.0" }
+    dependencies:
+      ssr-window: 4.0.2
     dev: false
 
   /to-regex-range/5.0.1:

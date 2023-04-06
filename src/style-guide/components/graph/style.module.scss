@@ -1,0 +1,11 @@
+.graph {
+  width: 35rem !important;
+  height: 10rem !important;
+}
+
+@media (max-width: 768px) {
+  .graph {
+    width: unset !important;
+    height: 7rem !important;
+  }
+}

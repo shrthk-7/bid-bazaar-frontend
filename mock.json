@@ -26,7 +26,12 @@
     "live": true,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",
-    "reputation": 120
+    "reputation": 120,
+    "bid_history": [
+      { "time": "2023-04-05T12:00:00Z", "bid": "456" },
+      { "time": "2023-04-07T12:00:00Z", "bid": "500" },
+      { "time": "2023-04-10T12:00:00Z", "bid": "600" }
+    ]
   },
   {
     "id": "123456",

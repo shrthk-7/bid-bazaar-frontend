@@ -10,12 +10,15 @@
     "pretty": "prettier --write ."
   },
   "dependencies": {
+    "chart.js": "^4.2.1",
     "firebase": "^9.19.1",
     "next": "13.2.4",
     "prettier": "^2.8.7",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "swiper": "^9.2.0"
   }
 }
