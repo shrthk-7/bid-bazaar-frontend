@@ -1,0 +1,188 @@
+@use "../../../styles/mixins.scss";
+.productPage {
+  @include mixins.flexCenter;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+    circle at 77vw 50vh,
+    var(--heroSection-bg2),
+    var(--heroSection-bg1) 40%
+  );
+  overflow: hidden !important;
+  padding-top: 2rem;
+
+  .productCard {
+    height: 80vh;
+    width: 80vw;
+    @include mixins.flexCenter;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 0.3rem;
+    padding: 1rem 3rem;
+
+    .productCarousel {
+      width: 40%;
+      height: 90%;
+      // background: red;
+      @include mixins.flexCenter;
+      .mySwiper {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 80%;
+        }
+      }
+    }
+    .productData {
+      // @include mixins.flexCenter;
+      width: 60%;
+      height: 90%;
+      // background: brown;
+      color: var(--white);
+      padding-left: 3rem;
+      .title {
+        font-size: 2rem;
+        word-wrap: break-word;
+        font-family: Anton;
+      }
+      .smallData {
+        @include mixins.flexCenter;
+        justify-content: flex-start;
+        margin-left: 2rem;
+        p {
+          display: inline-block;
+          margin-right: 2rem;
+          opacity: 0.7;
+        }
+        span {
+          padding: 0.3rem 1rem;
+          opacity: 0.8;
+          border: 1px solid var(--white);
+          border-radius: 0.5rem;
+        }
+      }
+      .owner {
+        @include mixins.flexCenter;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin-top: 1rem;
+        div {
+          @include mixins.flexCenter;
+          flex-direction: column;
+          font-size: 1.5rem;
+          font-weight: 700;
+          width: 30%;
+          span {
+            font-size: 0.8rem;
+            font-weight: 100;
+          }
+        }
+      }
+      .bidData {
+        @include mixins.flexCenter;
+        margin: 2rem auto;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        position: relative;
+        padding: 1rem 1rem;
+        span {
+          font-size: 0.8rem;
+          position: absolute;
+          top: 0;
+          opacity: 0.8;
+        }
+        .highestBidder {
+          @include mixins.flexCenter;
+          justify-content: space-around;
+          width: 35%;
+          border-right: 1px solid var(--white);
+          div {
+            @include mixins.flexCenter;
+            color: rgb(153, 85, 207);
+            h2 {
+              font-size: 2.5rem;
+            }
+            h3 {
+              font-size: 2rem;
+            }
+          }
+        }
+        .countDown {
+          @include mixins.flexCenter;
+          width: 55%;
+          border-right: 1px solid var(--white);
+          margin-right: 1rem;
+          p {
+            font-size: 3rem;
+            color: rgb(153, 85, 207);
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+}
+.btn {
+  padding: 0.5rem 1rem;
+  background: radial-gradient(
+    circle at bottom right,
+    rgb(95, 30, 148),
+    rgb(153, 85, 207)
+  );
+  border-radius: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    min-height: 100vh !important;
+    width: 100vw !important;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    overflow-y: auto;
+  }
+  .productCarousel {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .productData {
+    width: 100% !important;
+    height: 100% !important;
+    padding-left: 0rem !important;
+    .title {
+      font-size: 2rem !important;
+      font-family: Anton;
+    }
+    .bidData {
+      @include mixins.flexCenter;
+      flex-direction: column;
+      margin: 2rem auto;
+      width: 100% !important;
+      padding: 0.3rem;
+      span {
+        font-size: 0.8rem;
+        position: unset !important;
+      }
+      .highestBidder {
+        @include mixins.flexCenter;
+        justify-content: space-between;
+        width: 100% !important;
+        border-right: unset !important;
+        border-bottom: 1px solid var(--white);
+      }
+      .countDown {
+        @include mixins.flexCenter;
+        width: 100% !important;
+        border-bottom: 1px solid var(--white);
+        border-right: unset !important;
+        margin-right: 0 !important;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+        p {
+          font-size: 2rem !important;
+          color: rgb(153, 85, 207);
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

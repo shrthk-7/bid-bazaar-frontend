@@ -1,6 +1,6 @@
 @use "../../../styles/mixins.scss";
 
-.loader{
+.loader {
   @include mixins.flexCenter;
   height: 100vh;
   width: 100vw;
