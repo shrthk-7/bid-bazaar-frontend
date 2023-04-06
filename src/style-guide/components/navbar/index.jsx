@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
-import { signInWithGoogle } from "@/utils/firebase";
+// import { signInWithGoogle } from "@/utils/firebase";
 
 const Navbar = ({ mobileHamClicked }) => {
   return (
