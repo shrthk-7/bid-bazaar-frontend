@@ -10,6 +10,7 @@
     "pretty": "prettier --write ."
   },
   "dependencies": {
+    "firebase": "^9.19.1",
     "next": "13.2.4",
     "prettier": "^2.8.7",
     "react": "18.2.0",

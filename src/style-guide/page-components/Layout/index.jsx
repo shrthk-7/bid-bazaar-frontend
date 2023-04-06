@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "@/style-guide/components/navbar";
 import Loader from "@/style-guide/components/Loader";
+
 const Layout = ({ children }) => {
   const [load, setLoad] = useState(true);
 

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
+import { signInWithGoogle } from "@/utils/firebase";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,9 @@ const Navbar = () => {
         <a href="/market">MARKET</a>
       </div>
       <div className={styles.callToAction}>
-        <div className={styles.btn}>SignIn</div>
+        <div className={styles.btn} onClick={signInWithGoogle}>
+          SignIn
+        </div>
       </div>
     </div>
   );
