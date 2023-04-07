@@ -17,9 +17,11 @@ export default function Card({ slides }) {
     }
   };
   return (
-    <a className={style.container} href={`/product/${slides.id}`}>
+    <div className={style.container}>
       <div className={style.box}>
-        <img className={style.image} src={slides.photo}></img>
+        <a href={`/product/${slides.id}`}>
+          <img className={style.image} src={slides.photo}></img>
+        </a>
         <div className={style.title}>
           <b>{slides.title}</b>
         </div>
@@ -57,6 +59,6 @@ export default function Card({ slides }) {
           </>
         </div>
       </div>
-    </a>
+    </div>
   );
 }

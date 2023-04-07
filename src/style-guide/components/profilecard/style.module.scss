@@ -5,7 +5,7 @@
   padding: 2vw;
   border-top-left-radius: 4vw;
   border-bottom-left-radius: 4vw;
-  width: fit-content;
+  // width: fit-content;
   // position: fixed;
   // top: 5.5vw;
   // left: 3vw;
@@ -19,8 +19,8 @@
     @include mixins.flexCenter;
     flex-direction: column;
     color: white;
-    height: 43vw;
-    width: 20vw;
+    height: 38rem;
+    width: 18rem;
     background-color: var(--card-bg1);
     .profilepic {
       width: 8vw;
@@ -46,7 +46,7 @@
           sans-serif;
         text-align: center;
         word-wrap: break-word;
-        width: 15vw;
+        width: 15rem;
         padding-left: 0.7vw;
         padding-right: 0.7vw;
       }
@@ -59,9 +59,9 @@
 
     .bio {
       // padding: 0.5vw;
-      padding-top: 2vw;
-      padding-left: 1vw;
-      padding-right: 1vw;
+      padding-top: 2rem;
+      padding-left: 2rem;
+      padding-right: 1rem;
       word-wrap: break-word;
     }
 
@@ -69,10 +69,14 @@
       @include mixins.flexCenter;
 
       .links {
-        padding-top: 1vw;
-        padding-left: 0.5vw;
-        padding-right: 0.5vw;
+        padding-top: 2vw;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
         color: white;
+        svg {
+          height: 24px;
+          width: 24px;
+        }
       }
     }
 
@@ -81,7 +85,7 @@
       justify-content: space-between;
       font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      font-size: 1.3vw;
+      font-size: 1.3rem;
       font-weight: bold;
       padding-top: 4vw;
       padding-left: 0vw;
@@ -93,5 +97,15 @@
         padding-right: 2vw;
       }
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .card1 {
+    width: 90vw !important;
+    height: 38rem;
+  }
+  .profilepic {
+    width: 15vw !important;
+    height: 15vw !important;
   }
 }

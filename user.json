@@ -8,6 +8,185 @@
     "linkedIn": "https://www.linkedin.com/in/tolemy-kashyap/",
     "twitter": "https://twitter.com/johndoe"
   },
+  "reputation": 150,
+  "current_bids": [
+    {
+      "id": "123456",
+      "title": "One Piece Manga Volume XIV",
+      "owner": {
+        "id": "789",
+        "username": "johndoe",
+        "name": "John Doe"
+      },
+      "photo": "https://c4.wallpaperflare.com/wallpaper/935/573/142/gtr-nissan-black-matte-hd-wallpaper-preview.jpg",
+      "more_photos": [
+        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+      ],
+      "category": "Books",
+      "current_highest_bid": {
+        "amount": 150.0,
+        "currency": "₹",
+        "bidder": {
+          "id": "456",
+          "username": "jasonderula",
+          "name": "Jane Derula"
+        }
+      },
+      "live": true,
+      "time_left": "1d 2h 30m",
+      "start_time": "2023-04-05T12:00:00Z",
+      "reputation": 120
+    },
+    {
+      "id": "123456",
+      "title": "One Piece Manga Volume XIV",
+      "owner": {
+        "id": "789",
+        "username": "johndoe",
+        "name": "John Doe"
+      },
+      "photo": "https://i.pinimg.com/564x/31/24/04/312404537789ee67fb9924cce3cbbfa8.jpg",
+      "more_photos": [
+        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+      ],
+      "category": "Books",
+      "current_highest_bid": {
+        "amount": 150.0,
+        "currency": "₹",
+        "bidder": {
+          "id": "456",
+          "username": "jasonderula",
+          "name": "Jane Derula"
+        }
+      },
+      "live": true,
+      "time_left": "1d 2h 30m",
+      "start_time": "2023-04-05T12:00:00Z",
+      "reputation": 120
+    },
+    {
+      "id": "123456",
+      "title": "One Piece Manga Volume XIV",
+      "owner": {
+        "id": "789",
+        "username": "johndoe",
+        "name": "John Doe"
+      },
+      "photo": "https://i.pinimg.com/564x/5e/56/04/5e5604f01a32f252499dd168a9500fb2.jpg",
+      "more_photos": [
+        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+      ],
+      "category": "Books",
+      "current_highest_bid": {
+        "amount": 150.0,
+        "currency": "₹",
+        "bidder": {
+          "id": "456",
+          "username": "jasonderula",
+          "name": "Jane Derula"
+        }
+      },
+      "live": false,
+      "time_left": "1d 2h 30m",
+      "start_time": "2023-04-05T12:00:00Z",
+      "reputation": 120
+    }
+  ],
+  "bought_items": [
+    {
+      "id": "123456",
+      "title": "One Piece Manga Volume XIV",
+      "owner": {
+        "id": "789",
+        "username": "johndoe",
+        "name": "John Doe"
+      },
+      "photo": "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "more_photos": [
+        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+      ],
+      "category": "Books",
+      "current_highest_bid": {
+        "amount": 150.0,
+        "currency": "₹",
+        "bidder": {
+          "id": "456",
+          "username": "jasonderula",
+          "name": "Jane Derula"
+        }
+      },
+      "live": true,
+      "time_left": "1d 2h 30m",
+      "start_time": "2023-04-05T12:00:00Z",
+      "reputation": 120
+    },
+    {
+      "id": "123456",
+      "title": "One Piece Manga Volume XIV",
+      "owner": {
+        "id": "789",
+        "username": "johndoe",
+        "name": "John Doe"
+      },
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwfROCEcTFWd8yNNjpkwZNnVQ37ag4E90jj4Ev-eYcKcST8VdfDqxxXa3mTh0w4o21etc&usqp=CAU",
+      "more_photos": [
+        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+      ],
+      "category": "Books",
+      "current_highest_bid": {
+        "amount": 150.0,
+        "currency": "₹",
+        "bidder": {
+          "id": "456",
+          "username": "jasonderula",
+          "name": "Jane Derula"
+        }
+      },
+      "live": true,
+      "time_left": "1d 2h 30m",
+      "start_time": "2023-04-05T12:00:00Z",
+      "reputation": 120
+    },
+    {
+      "id": "123456",
+      "title": "One Piece Manga Volume XIV",
+      "owner": {
+        "id": "789",
+        "username": "johndoe",
+        "name": "John Doe"
+      },
+      "photo": "https://insider-gaming.com/wp-content/uploads/2023/03/ps5-pro.png",
+      "more_photos": [
+        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+      ],
+      "category": "Books",
+      "current_highest_bid": {
+        "amount": 150.0,
+        "currency": "₹",
+        "bidder": {
+          "id": "456",
+          "username": "jasonderula",
+          "name": "Jane Derula"
+        }
+      },
+      "live": false,
+      "time_left": "1d 2h 30m",
+      "start_time": "2023-04-05T12:00:00Z",
+      "reputation": 120
+    }
+  ],
   "saved_products": [
     {
       "id": "123456",
@@ -133,7 +312,7 @@
         "username": "johndoe",
         "name": "John Doe"
       },
-      "photo": "https://i.pinimg.com/564x/5e/56/04/5e5604f01a32f252499dd168a9500fb2.jpg",
+      "photo": "https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_2.0/c_scale,w_500/ncom/en_US/switch/videos/heg001-07060600/posters/oled-model",
       "more_photos": [
         "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
         "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
@@ -184,185 +363,6 @@
       "reputation": 120
     }
   ],
-  "reputation": 150,
-  "current_bids": [
-    {
-      "id": "123456",
-      "title": "One Piece Manga Volume XIV",
-      "owner": {
-        "id": "789",
-        "username": "johndoe",
-        "name": "John Doe"
-      },
-      "photo": "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
-      "more_photos": [
-        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
-        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
-        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
-      ],
-      "category": "Books",
-      "current_highest_bid": {
-        "amount": 150.0,
-        "currency": "₹",
-        "bidder": {
-          "id": "456",
-          "username": "jasonderula",
-          "name": "Jane Derula"
-        }
-      },
-      "live": true,
-      "time_left": "1d 2h 30m",
-      "start_time": "2023-04-05T12:00:00Z",
-      "reputation": 120
-    },
-    {
-      "id": "123456",
-      "title": "One Piece Manga Volume XIV",
-      "owner": {
-        "id": "789",
-        "username": "johndoe",
-        "name": "John Doe"
-      },
-      "photo": "https://i.pinimg.com/564x/31/24/04/312404537789ee67fb9924cce3cbbfa8.jpg",
-      "more_photos": [
-        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
-        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
-        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
-      ],
-      "category": "Books",
-      "current_highest_bid": {
-        "amount": 150.0,
-        "currency": "₹",
-        "bidder": {
-          "id": "456",
-          "username": "jasonderula",
-          "name": "Jane Derula"
-        }
-      },
-      "live": true,
-      "time_left": "1d 2h 30m",
-      "start_time": "2023-04-05T12:00:00Z",
-      "reputation": 120
-    },
-    {
-      "id": "123456",
-      "title": "One Piece Manga Volume XIV",
-      "owner": {
-        "id": "789",
-        "username": "johndoe",
-        "name": "John Doe"
-      },
-      "photo": "https://i.pinimg.com/564x/5e/56/04/5e5604f01a32f252499dd168a9500fb2.jpg",
-      "more_photos": [
-        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
-        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
-        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
-      ],
-      "category": "Books",
-      "current_highest_bid": {
-        "amount": 150.0,
-        "currency": "₹",
-        "bidder": {
-          "id": "456",
-          "username": "jasonderula",
-          "name": "Jane Derula"
-        }
-      },
-      "live": false,
-      "time_left": "1d 2h 30m",
-      "start_time": "2023-04-05T12:00:00Z",
-      "reputation": 120
-    }
-  ],
-  "bought_items": [
-    {
-      "id": "123456",
-      "title": "One Piece Manga Volume XIV",
-      "owner": {
-        "id": "789",
-        "username": "johndoe",
-        "name": "John Doe"
-      },
-      "photo": "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
-      "more_photos": [
-        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
-        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
-        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
-      ],
-      "category": "Books",
-      "current_highest_bid": {
-        "amount": 150.0,
-        "currency": "₹",
-        "bidder": {
-          "id": "456",
-          "username": "jasonderula",
-          "name": "Jane Derula"
-        }
-      },
-      "live": true,
-      "time_left": "1d 2h 30m",
-      "start_time": "2023-04-05T12:00:00Z",
-      "reputation": 120
-    },
-    {
-      "id": "123456",
-      "title": "One Piece Manga Volume XIV",
-      "owner": {
-        "id": "789",
-        "username": "johndoe",
-        "name": "John Doe"
-      },
-      "photo": "https://i.pinimg.com/564x/31/24/04/312404537789ee67fb9924cce3cbbfa8.jpg",
-      "more_photos": [
-        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
-        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
-        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
-      ],
-      "category": "Books",
-      "current_highest_bid": {
-        "amount": 150.0,
-        "currency": "₹",
-        "bidder": {
-          "id": "456",
-          "username": "jasonderula",
-          "name": "Jane Derula"
-        }
-      },
-      "live": true,
-      "time_left": "1d 2h 30m",
-      "start_time": "2023-04-05T12:00:00Z",
-      "reputation": 120
-    },
-    {
-      "id": "123456",
-      "title": "One Piece Manga Volume XIV",
-      "owner": {
-        "id": "789",
-        "username": "johndoe",
-        "name": "John Doe"
-      },
-      "photo": "https://i.pinimg.com/564x/5e/56/04/5e5604f01a32f252499dd168a9500fb2.jpg",
-      "more_photos": [
-        "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
-        "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
-        "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
-      ],
-      "category": "Books",
-      "current_highest_bid": {
-        "amount": 150.0,
-        "currency": "₹",
-        "bidder": {
-          "id": "456",
-          "username": "jasonderula",
-          "name": "Jane Derula"
-        }
-      },
-      "live": false,
-      "time_left": "1d 2h 30m",
-      "start_time": "2023-04-05T12:00:00Z",
-      "reputation": 120
-    }
-  ],
   "sold_items": [
     {
       "id": "123456",
@@ -372,7 +372,7 @@
         "username": "johndoe",
         "name": "John Doe"
       },
-      "photo": "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "photo": "https://hypefly-assets.s3.ap-south-1.amazonaws.com/media/products/desktop_thumbnail/1179-desktop_thumbnail.webp",
       "more_photos": [
         "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
         "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
@@ -401,7 +401,7 @@
         "username": "johndoe",
         "name": "John Doe"
       },
-      "photo": "https://i.pinimg.com/564x/31/24/04/312404537789ee67fb9924cce3cbbfa8.jpg",
+      "photo": "https://i.pinimg.com/originals/ed/be/33/edbe33a8dba7584167a3e5f72a634b47.jpg",
       "more_photos": [
         "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
         "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
@@ -430,7 +430,7 @@
         "username": "johndoe",
         "name": "John Doe"
       },
-      "photo": "https://i.pinimg.com/564x/5e/56/04/5e5604f01a32f252499dd168a9500fb2.jpg",
+      "photo": "https://dks.scene7.com/is/image/GolfGalaxy/22NIKMNBCLTCSGRNTBOS?qlt=70&wid=600&fmt=pjpeg",
       "more_photos": [
         "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
         "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
