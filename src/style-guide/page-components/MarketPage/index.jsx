@@ -4,6 +4,7 @@ import { BiFilterAlt, BiQuestionMark, BiDirections } from "react-icons/bi";
 import { RiAuctionLine } from "react-icons/ri";
 import data from "../../../../mock.json";
 import Card from "@/style-guide/components/card";
+import Filteroptions from "@/style-guide/components/filteroptions";
 
 const MarketPage = () => {
   const [selectedAuctionType, setSelectedAuctionType] = useState("standard");
@@ -69,6 +70,7 @@ const MarketPage = () => {
             <BiFilterAlt />
             <span>Filter</span>
           </p>
+          {filterOn ? <Filteroptions /> : null}
         </div>
         <div className={styles.mainData}>
           {/* data mapping */}
