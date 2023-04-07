@@ -61,11 +61,11 @@
           border-radius: 0.5rem;
           margin-right: 1rem;
         }
-        .live{
-          background: goldenrod
+        .live {
+          background: goldenrod;
         }
-        .ended{
-          background: red
+        .ended {
+          background: red;
         }
       }
       .owner {
@@ -139,7 +139,7 @@
   border-radius: 0.3rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .productCard {
     min-height: 100vh !important;
     width: 100vw !important;

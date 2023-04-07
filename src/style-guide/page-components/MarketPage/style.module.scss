@@ -1,0 +1,88 @@
+@use "../../../styles/mixins.scss";
+.marketPageBg {
+  @include mixins.flexCenter;
+  height: 100vh !important;
+  width: 100vw !important;
+  background: radial-gradient(
+    circle at 80vw 50vh,
+    var(--heroSection-bg2),
+    var(--heroSection-bg1) 40%
+  );
+  overflow: hidden !important;
+
+  .heroBloblight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30rem;
+    width: 30rem;
+    background: radial-gradient(
+      circle at top left,
+      var(--heroSection-bg2),
+      transparent 40%
+    );
+  }
+  .marketPage {
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(1rem);
+    padding: 3rem 2rem;
+    @include mixins.flexCenter;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 3;
+
+    .navbar {
+      @include mixins.flexCenter;
+      width: 100%;
+      justify-content: space-evenly;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(1rem);
+
+      .navSelected {
+        background: radial-gradient(
+          circle at bottom right,
+          rgb(95, 30, 148),
+          rgb(153, 85, 207)
+        );
+      }
+      .navInitail {
+        background: unset;
+      }
+
+      p {
+        @include mixins.flexCenter;
+        font-size: 1.3rem;
+        color: var(--white);
+        gap: 0.5rem;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    .mainData {
+      min-height: 75vh;
+      margin-top: 2rem;
+      @include mixins.flexCenter;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .marketPageBg {
+    .marketPage {
+      padding: 0rem 2rem;
+      .navbar {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
