@@ -44,7 +44,9 @@ const ProductPage = ({ id }) => {
           <div className={styles.smallData}>
             <p>{data.id}</p>
             <span>{data.category}</span>
-            <span className={`${data.live?styles.live:styles.ended}`}>{data.live?"Live":"Ended"}</span>
+            <span className={`${data.live ? styles.live : styles.ended}`}>
+              {data.live ? "Live" : "Ended"}
+            </span>
           </div>
           <div className={styles.owner}>
             <div>
