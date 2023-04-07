@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import styles from "./style.module.scss";
-import allData from "../../../../mock.json";
+// import allData from "../../../../mock.json";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,61 +10,134 @@ import { Navigation } from "swiper";
 import io from "socket.io-client";
 
 import { Graph } from "@/style-guide/components/graph";
+import { formatDate } from "@/utils/formatDate";
+
+const tempData = {
+  _id: "643051504188fe9e8eefc7d5",
+  owner: {
+    _id: "642fdbfcbff8d9dea880739e",
+    name: "Sharthak",
+    email: "sharthak21_ug@cse.nits.ac.in",
+    photoURL:
+      "https://lh3.googleusercontent.com/a/AGNmyxZZ0uKwYG2H1ZbXjOVnhxECh1XOk5B348N1nGiS=s96-c",
+    socials: {},
+    listedProducts: [],
+    boughtProducts: [],
+    currentBids: [],
+    balance: 1000,
+    reputation: 0,
+  },
+  currentHighestBidder: {
+    _id: "642fdbfcbff8d9dea880739e",
+    name: "Ankan Dutta",
+    email: "sharthak21_ug@cse.nits.ac.in",
+    photoURL:
+      "https://lh3.googleusercontent.com/a/AGNmyxZZ0uKwYG2H1ZbXjOVnhxECh1XOk5B348N1nGiS=s96-c",
+    socials: {},
+    listedProducts: [],
+    boughtProducts: [],
+    currentBids: [],
+    balance: 1000,
+    reputation: 0,
+  },
+  title: "random",
+  description: "bing bong",
+  photos: [
+    "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+    "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+    "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq",
+  ],
+  category: "book",
+  start: "2023-04-06T21:13:47.733Z",
+  end: "2023-04-06T21:13:47.799Z",
+  reputation: 0,
+  currentHighestBid: 150,
+  bidHistory: [
+    {
+      time: "2023-04-05T12:00:00Z",
+      bid: "456",
+    },
+    {
+      time: "2023-04-05T12:00:00Z",
+      bid: "456",
+    },
+    {
+      time: "2023-04-07T12:00:00Z",
+      bid: "500",
+    },
+    {
+      time: "2023-04-07T12:00:00Z",
+      bid: "500",
+    },
+    {
+      time: "2023-04-10T12:00:00Z",
+      bid: "600",
+    },
+    {
+      time: "2023-04-10T12:00:00Z",
+      bid: "600",
+    },
+    {
+      time: "2023-04-05T12:00:00Z",
+      bid: "456",
+    },
+    {
+      time: "2023-04-07T12:00:00Z",
+      bid: "500",
+    },
+    {
+      time: "2023-04-10T12:00:00Z",
+      bid: "600",
+    },
+  ],
+};
 
 const ProductPage = ({ id }) => {
-  const data = allData.find((ele) => ele.id === id);
-  console.log({ data });
-  const images = data.more_photos;
-  images.push(data.photo);
+  const [timeLeft, setTimeLeft] = useState("loading");
+  const [data, setData] = useState(tempData);
+  let isLive = Date.now() >= data.start && Date.now() <= data.end;
   const graphLabels = [];
   const graphData = [];
-  data.bid_history.map((ele) => {
+  data.bidHistory.map((ele) => {
     graphLabels.push(ele.time);
     graphData.push(ele.bid);
   });
 
-  //productData is in json format
-  const PutDatainHTML = (productData) => {
-    //TODO
+  const keepUpdatingTimeLeft = () => {
+    const timeLeftInMS = new Date(data.end) - Date.now();
+    if (timeLeftInMS <= 0) {
+      setTimeLeft("Ended");
+      isLive = false;
+      return;
+    }
+    const formattedDate = formatDate(timeLeftInMS);
+    setTimeLeft(() => formattedDate);
+    setTimeout(() => keepUpdatingTimeLeft(), 60 * 1000);
   };
+  const socket = io(`${process.env.NEXT_PUBLIC_API_URL}`);
 
-  const GetHTMLData = () => {
-    var data = "";
-    //todo
-    return data;
-  };
-
-  const GetDataForHTML = async () => {
-    var newData = GetHTMLData();
-    //TODO
-    const userID = localStorage.getItem("_id");
-    socket.emit("newBid", userID, id, newData.bid);
-
-    socket.on("productinfo", (productData) => {
-      PutDatainHTML(productData);
-    });
+  const handleNewBid = () => {
+    const userId = localStorage.getItem("_id");
+    if (!userId) return;
+    socket.emit("newBid", userId, id, Math.random());
+    socket.close();
   };
 
   useEffect(() => {
-    const socket = io("localhost:3000/marketplace/product");
-
-    var productData = "";
-
+    if (socket.disconnected) {
+      console.log("abcd");
+      socket.connect();
+    }
     socket.on("connect", () => {
-      console.log(`You are connected to: ${socket.id}`);
       socket.emit("connect-to-room", id, (message) => {
-        console.log(message);
         socket.on("productinfo", (product) => {
-          productData = product;
-          PutDatainHTML(productData);
+          setData(product);
         });
       });
     });
-
-    document.getElementById("bid-button").onclick = () => {
-      GetDataForHTML();
-    };
-  });
+    keepUpdatingTimeLeft();
+    return () => socket.close();
+  }, []);
 
   return (
     <div className={styles.productPage}>
@@ -75,7 +148,7 @@ const ProductPage = ({ id }) => {
             modules={[Navigation]}
             className={styles.mySwiper}
           >
-            {images.map((ele) => {
+            {data.photos.map((ele) => {
               return (
                 <SwiperSlide>
                   <img src={ele} alt="" />
@@ -87,10 +160,10 @@ const ProductPage = ({ id }) => {
         <div className={styles.productData}>
           <div className={styles.title}>{data.title}</div>
           <div className={styles.smallData}>
-            <p>{data.id}</p>
+            <p>{data._id}</p>
             <span>{data.category}</span>
-            <span className={`${data.live ? styles.live : styles.ended}`}>
-              {data.live ? "Live" : "Ended"}
+            <span className={isLive ? styles.live : styles.ended}>
+              {isLive ? "Live" : "Ended"}
             </span>
           </div>
           <div className={styles.owner}>
@@ -107,22 +180,19 @@ const ProductPage = ({ id }) => {
             <div className={styles.highestBidder}>
               <span>Current Bid</span>
               <div>
-                <h2>{data.current_highest_bid.currency}</h2>
-                <h3>{data.current_highest_bid.amount}</h3>
+                <h3>${data.currentHighestBid}</h3>
               </div>
-              <p>{data.current_highest_bid.bidder.name}</p>
+              <p>{data.currentHighestBidder.name}</p>
             </div>
             <div className={styles.countDown}>
               <span>Auction Ends in</span>
-              <p>{data.time_left}</p>
+              <p>{timeLeft}</p>
             </div>
-            <input type="textarea"></input>
-            <div className={styles.btn} id="bid-button">
+            <div className={styles.btn} onClick={handleNewBid}>
               BID
             </div>
           </div>
           <Graph data={graphData} labels={graphLabels} />
-          <div className={styles.ProductPageSescription}></div>
         </div>
       </div>
     </div>

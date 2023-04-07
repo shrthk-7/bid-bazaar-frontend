@@ -1,7 +1,7 @@
 [
   {
-    "id": "123456",
-    "_id": "123456",
+    "id": "643051504188fe9e8eefc7d5",
+    "_id": "643051504188fe9e8eefc7d5",
     "title": "One Piece Manga Volume XIV",
     "description": "My name is Gyoubu Masataka Oniwa",
     "owner": {
@@ -31,9 +31,18 @@
     "start_time": "2023-04-05T12:00:00Z",
     "reputation": 120,
     "bid_history": [
-      { "time": "2023-04-05T12:00:00Z", "bid": "456" },
-      { "time": "2023-04-07T12:00:00Z", "bid": "500" },
-      { "time": "2023-04-10T12:00:00Z", "bid": "600" }
+      {
+        "time": "2023-04-05T12:00:00Z",
+        "bid": "456"
+      },
+      {
+        "time": "2023-04-07T12:00:00Z",
+        "bid": "500"
+      },
+      {
+        "time": "2023-04-10T12:00:00Z",
+        "bid": "600"
+      }
     ]
   },
   {
