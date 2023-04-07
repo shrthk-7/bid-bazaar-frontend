@@ -1,9 +1,14 @@
-import React from "react";
+import { useContext } from "react";
 import styles from "./style.module.scss";
 import SignIn from "@/style-guide/components/SignIn";
+import SignOut from "@/style-guide/components/SignOut";
 import Link from "next/link";
 
+import { AuthContext } from "@/context/auth-context";
+
 const Navbar = ({ mobileHamClicked }) => {
+  const auth = useContext(AuthContext);
+
   return (
     <div className={styles.navWrapper}>
       <div
@@ -18,7 +23,11 @@ const Navbar = ({ mobileHamClicked }) => {
           <Link href="/market">MARKET</Link>
         </div>
         <div className={styles.callToAction}>
-          <SignIn />
+          {auth.isLoggedIn ? (
+            <SignOut login={auth.login} />
+          ) : (
+            <SignIn logout={auth.logout} />
+          )}
         </div>
       </div>
     </div>

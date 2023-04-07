@@ -2,7 +2,7 @@ import style from "./style.module.scss";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { signInWithGoogle } from "@/utils/firebase";
 
-const SignIn = () => {
+const SignIn = ({ login }) => {
   const handleSignIn = async () => {
     try {
       const { user } = await signInWithGoogle();
@@ -12,7 +12,7 @@ const SignIn = () => {
       }
       console.log(user);
       const data = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/user/login`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/user/login`,
         {
           method: "POST",
           headers: {
@@ -31,8 +31,7 @@ const SignIn = () => {
         alert("User Sign up failed");
         return;
       }
-      localStorage.setItem("token", res.token);
-      localStorage.setItem("signedIn", true);
+      login(res.token, res.photoURL);
     } catch (error) {
       console.log({ error });
     }
