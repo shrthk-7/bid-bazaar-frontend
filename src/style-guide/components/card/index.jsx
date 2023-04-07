@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-import slides from "../../../../mock.json";
-import style from "./styles.module.scss";
+// import slides from "../../../../mock.json";
+import style from "./style.module.scss";
 import { AiFillHeart } from "react-icons/ai";
 
 export default function Card({ slides }) {
@@ -19,7 +19,9 @@ export default function Card({ slides }) {
   return (
     <div className={style.container}>
       <div className={style.box}>
-        <img className={style.image} src={slides.photo}></img>
+        <a href={`/product/${slides.id}`}>
+          <img className={style.image} src={slides.photo}></img>
+        </a>
         <div className={style.title}>
           <b>{slides.title}</b>
         </div>

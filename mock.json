@@ -1,7 +1,9 @@
 [
   {
     "id": "123456",
+    "_id": "123456",
     "title": "One Piece Manga Volume XIV",
+    "description":"My name is Gyoubu Masataka Oniwa",
     "owner": {
       "id": "789",
       "username": "johndoe",
@@ -35,7 +37,7 @@
     ]
   },
   {
-    "id": "123456",
+    "id": "123457",
     "title": "One Piece Manga Volume XIV",
     "owner": {
       "id": "789",

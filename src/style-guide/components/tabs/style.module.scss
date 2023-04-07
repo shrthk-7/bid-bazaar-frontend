@@ -1,0 +1,55 @@
+@use "../../../styles/mixins.scss";
+
+.outline {
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-moz-scrollbar {
+    display: none;
+  }
+
+  .navbar {
+    height: max-content;
+    width: 67vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--card-bg1);
+    color: white;
+    position: fixed;
+    z-index: 2;
+    border-radius: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    backdrop-filter: blur(2rem);
+
+    .currentbids,
+    .boughtitems,
+    .solditems,
+    .saveditems {
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      width: 10rem;
+      text-align: center;
+      transition-duration: 0.5s;
+    }
+  }
+
+  .cards {
+    @include mixins.flexCenter;
+    width: 67vw;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .outline {
+    overflow: visible;
+  }
+}

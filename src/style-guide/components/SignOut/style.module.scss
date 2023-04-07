@@ -1,0 +1,29 @@
+.logoutButton {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(
+    circle at bottom right,
+    rgb(95, 30, 148),
+    rgb(153, 85, 207)
+  );
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: radial-gradient(
+      circle at top right,
+      rgb(95, 30, 148),
+      rgb(153, 85, 207)
+    );
+  }
+  .logoutIcon {
+    font-size: 1.5rem;
+  }
+}

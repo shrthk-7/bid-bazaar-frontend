@@ -5,6 +5,8 @@ import Spinner from "@/style-guide/components/spinner";
 import HomeHeroSection from "@/style-guide/page-components/HomeHeroSection";
 import Card from "../style-guide/components/card";
 import slides from "../../mock.json";
+import Profilecard from "@/style-guide/components/profilecard";
+import Profilepage from "./profile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +22,7 @@ export default function Home() {
       <main className={styles.main}>
         <HomeHeroSection />
         {/* <Card slides={slides[0]} /> */}
+        {/* <Profilepage /> */}
       </main>
     </>
   );

@@ -1,0 +1,22 @@
+@use "../../../styles/mixins.scss";
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  gap: 3rem;
+  padding-top: 4rem;
+  background: radial-gradient(
+    circle at left,
+    var(--heroSection-bg2),
+    var(--heroSection-bg1) 40%
+  );
+}
+
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column !important;
+    overflow: scroll !important;
+    min-height: 100rem;
+  }
+}
