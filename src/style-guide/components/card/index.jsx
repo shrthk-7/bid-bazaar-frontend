@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-import slides from "../../../../mock.json";
-import style from "./styles.module.scss";
+// import slides from "../../../../mock.json";
+import style from "./style.module.scss";
 import { AiFillHeart } from "react-icons/ai";
 
 export default function Card({ slides }) {
