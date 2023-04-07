@@ -17,7 +17,7 @@
         "username": "johndoe",
         "name": "John Doe"
       },
-      "photo": "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "photo": "https://images.macrumors.com/article-new/2019/01/iphone11wallpaper-800x637.jpg",
       "more_photos": [
         "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
         "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
@@ -75,7 +75,7 @@
         "username": "johndoe",
         "name": "John Doe"
       },
-      "photo": "https://i.pinimg.com/564x/65/77/59/65775950da0ed5896f416bb56d5d0e4f.jpg",
+      "photo": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/814L+vq01mL.jpg",
       "more_photos": [
         "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
         "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
@@ -185,7 +185,7 @@
     }
   ],
   "reputation": 150,
-  "currently_bids": [
+  "current_bids": [
     {
       "id": "123456",
       "title": "One Piece Manga Volume XIV",

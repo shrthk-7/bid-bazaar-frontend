@@ -17,7 +17,7 @@ export default function Card({ slides }) {
     }
   };
   return (
-    <div className={style.container}>
+    <a className={style.container} href={`/product/${slides.id}`}>
       <div className={style.box}>
         <img className={style.image} src={slides.photo}></img>
         <div className={style.title}>
@@ -57,6 +57,6 @@ export default function Card({ slides }) {
           </>
         </div>
       </div>
-    </div>
+    </a>
   );
 }

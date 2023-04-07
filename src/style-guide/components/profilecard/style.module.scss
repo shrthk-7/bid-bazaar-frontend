@@ -1,7 +1,7 @@
 @use "../../../styles/mixins.scss";
 
 .card {
-  background-color: var(--profilecard-bg1);
+  // background-color: var(--profilecard-bg1);
   padding: 2vw;
   border-top-left-radius: 4vw;
   border-bottom-left-radius: 4vw;
@@ -9,18 +9,19 @@
   // position: fixed;
   // top: 5.5vw;
   // left: 3vw;
+
   .card1 {
-    box-shadow: 0 8px 32px 0 var(--heroSection-bg2);
+    // box-shadow: 0 8px 32px 0 var(--heroSection-bg2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.308);
     @include mixins.flexCenter;
     flex-direction: column;
     color: white;
     height: 43vw;
     width: 20vw;
-
+    background-color: var(--card-bg1);
     .profilepic {
       width: 8vw;
       height: 8vw;
@@ -43,6 +44,10 @@
       .username {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
+        text-align: center;
+        word-wrap: break-word;
+        width: 15vw;
+        padding-left: 0.7vw;
         padding-right: 0.7vw;
       }
 
