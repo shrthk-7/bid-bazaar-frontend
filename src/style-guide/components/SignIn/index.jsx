@@ -31,7 +31,7 @@ const SignIn = ({ login }) => {
         alert("User Sign up failed");
         return;
       }
-      login(res.token, res.photoURL);
+      login(res.token, res.user.photoURL, res.user._id);
     } catch (error) {
       console.log({ error });
     }

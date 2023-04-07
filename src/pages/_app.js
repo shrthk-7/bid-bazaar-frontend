@@ -7,15 +7,17 @@ export default function App({ Component, pageProps }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const logout = useCallback(() => {
+    localStorage.removeItem("_id");
     localStorage.removeItem("signedIn");
     localStorage.removeItem("token");
     localStorage.removeItem("photoURL");
     setIsLoggedIn(false);
   }, []);
-  const login = useCallback((token, photoURL) => {
+  const login = useCallback((token, photoURL, id) => {
     localStorage.setItem("signedIn", true);
     localStorage.setItem("token", token);
     localStorage.setItem("photoURL", photoURL);
+    localStorage.setItem("_id", id);
     setIsLoggedIn(true);
   }, []);
 

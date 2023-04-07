@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import styles from "./style.module.scss";
 // import allData from "../../../../mock.json";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import io from "socket.io-client";
 import io from "socket.io-client";
 
 import { Graph } from "@/style-guide/components/graph";
@@ -115,10 +114,20 @@ const ProductPage = ({ id }) => {
     setTimeLeft(() => formattedDate);
     setTimeout(() => keepUpdatingTimeLeft(), 60 * 1000);
   };
+  const socket = io(`${process.env.NEXT_PUBLIC_API_URL}`);
+
+  const handleNewBid = () => {
+    const userId = localStorage.getItem("_id");
+    if (!userId) return;
+    socket.emit("newBid", userId, id, Math.random());
+    socket.close();
+  };
 
   useEffect(() => {
-    const socket = io(`${process.env.NEXT_PUBLIC_API_URL}`);
-
+    if (socket.disconnected) {
+      console.log("abcd");
+      socket.connect();
+    }
     socket.on("connect", () => {
       socket.emit("connect-to-room", id, (message) => {
         socket.on("productinfo", (product) => {
@@ -179,7 +188,7 @@ const ProductPage = ({ id }) => {
               <span>Auction Ends in</span>
               <p>{timeLeft}</p>
             </div>
-            <div className={styles.btn} id="bid-button">
+            <div className={styles.btn} onClick={handleNewBid}>
               BID
             </div>
           </div>
