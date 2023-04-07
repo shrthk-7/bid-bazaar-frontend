@@ -56,7 +56,7 @@
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       // background: var(--card-bg1);
-      color: var(--card-bg2);
+      color: var(--hero-ring-light);
       border-bottom: 0.1px solid grey;
       font-family: "Anton", sans-serif;
     }
@@ -89,6 +89,24 @@
 
     .owner_name {
       color: var(--card-bg2);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    // justify-content: center!important;
+    .box {
+      margin-left: 50vw !important;
+      margin-right: 30vw !important;
+      width: 80vw !important;
+    }
+    .image {
+      width: 70vw !important;
+      height: 71vw !important;
+    }
+    .title {
+      font-size: medium;
     }
   }
 }

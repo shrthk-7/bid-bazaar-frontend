@@ -4,7 +4,7 @@ import slides from "../../../../user.json";
 import Card from "../card";
 
 export default function Tabs() {
-  const [isClicked1, setIsClicked1] = useState(false);
+  const [isClicked1, setIsClicked1] = useState(true);
   const [color1, setColor1] = useState("var(--heroSection-bg2)");
   const [isClicked2, setIsClicked2] = useState(false);
   const [color2, setColor2] = useState("var(--card-bg1)");
@@ -83,13 +83,26 @@ export default function Tabs() {
           onClick={filter4}
           style={{ background: color4 }}
         >
-          Sold Items
+          On Sale
         </div>
       </div>
       <div className={style.cards}>
-        {slides.saved_products.map((item) => {
-          return <Card slides={item} />;
-        })}
+        {isClicked1 &&
+          slides.current_bids.map((item) => {
+            return <Card slides={item} />;
+          })}
+        {isClicked2 &&
+          slides.bought_items.map((item) => {
+            return <Card slides={item} />;
+          })}
+        {isClicked3 &&
+          slides.saved_products.map((item) => {
+            return <Card slides={item} />;
+          })}
+        {isClicked4 &&
+          slides.sold_items.map((item) => {
+            return <Card slides={item} />;
+          })}
       </div>
     </div>
   );
