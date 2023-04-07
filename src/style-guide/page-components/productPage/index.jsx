@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import io from "socket.io-client";
+import io from "socket.io-client";
 
 import { Graph } from "@/style-guide/components/graph";
 import { formatDate } from "@/utils/formatDate";
