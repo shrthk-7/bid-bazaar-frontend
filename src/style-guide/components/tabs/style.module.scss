@@ -10,14 +10,15 @@
     width: 67vw;
     @include mixins.flexCenter;
     justify-content: space-around;
-    background-color: var(--profilecard-bg1);
+    background-color: var(--card-bg1);
     color: white;
     position: fixed;
     z-index: 2;
     // padding-bottom: 100px;
     // top: 5.5vw;
     // left: 29vw;
-    border-radius: 3rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 
     .currentbids,
     .boughtitems,
