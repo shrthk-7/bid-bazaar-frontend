@@ -1,0 +1,86 @@
+@use "../../../styles/mixins.scss";
+
+.categories {
+  @include mixins.flexCenter;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 15rem;
+  position: absolute;
+  top: 20vw;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+
+  .mini,
+  .maxi {
+    // width: 5rem;
+    // padding-left: 0.3rem;
+    text-decoration: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    min-width: 5rem;
+    margin: 0.5rem 0;
+  }
+
+  .category {
+    .category_title {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    select {
+      outline: none;
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      background: var(--black);
+      color: #fff;
+      backdrop-filter: blur(1rem);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: medium;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+
+    .category_names {
+      padding-left: 1rem;
+
+      .categoryA {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .categories_name {
+      padding-top: 0.5rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: medium;
+    }
+  }
+
+  .pricerange {
+    @include mixins.flexCenter;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    .pricerange_title {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .price_inputs {
+      @include mixins.flexCenter;
+      flex-direction: column;
+      padding-top: 0.7rem;
+      padding-left: 1rem;
+    }
+  }
+}

@@ -6,6 +6,9 @@
   &::-webkit-scrollbar {
     display: none;
   }
+  &::-moz-scrollbar {
+    display: none;
+  }
 
   .navbar {
     height: max-content;
