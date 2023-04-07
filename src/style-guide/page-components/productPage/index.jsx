@@ -7,13 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import io from 'socket.io-client';
+import io from "socket.io-client";
 
 import { Graph } from "@/style-guide/components/graph";
-
-
-
-
 
 const ProductPage = ({ id }) => {
   const data = allData.find((ele) => ele.id === id);
@@ -27,129 +23,48 @@ const ProductPage = ({ id }) => {
     graphData.push(ele.bid);
   });
 
-
   //productData is in json format
-  const PutDatainHTML = (productData)=>{
+  const PutDatainHTML = (productData) => {
     //TODO
-  }
+  };
 
-  const GetHTMLData = ()=>{
-    var data = ""
+  const GetHTMLData = () => {
+    var data = "";
     //todo
-    return data
-  }
+    return data;
+  };
 
-  const GetDataForHTML = async ()=>{
-    var newData = GetHTMLData()
+  const GetDataForHTML = async () => {
+    var newData = GetHTMLData();
     //TODO
     const userID = localStorage.getItem("_id");
-    socket.emit('newBid', userID, id, newData.bid);
-
-    socket.on('productinfo', (productData)=>{
-      PutDatainHTML(productData)
-    })
-  }
-
-
-
-
-  useEffect(()=>{
-    const socket = io('localhost:3000/marketplace/product');
-
-    var productData = "" 
-
-    socket.on('connect', ()=>{
-      console.log(`You are connected to: ${socket.id}`)
-      socket.emit('connect-to-room', id, message => {
-        console.log(message)
-        socket.on('productinfo', (product)=>{
-          productData = product
-          PutDatainHTML(productData)
-        })
-      })
-    })
-
-
-    document.getElementById('bid-button').onclick = (()=>{
-      GetDataForHTML()
-    })
-
-
-
-
-
-
-
-
-
-
-
-  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    socket.emit("newBid", userID, id, newData.bid);
+
+    socket.on("productinfo", (productData) => {
+      PutDatainHTML(productData);
+    });
+  };
+
+  useEffect(() => {
+    const socket = io("localhost:3000/marketplace/product");
+
+    var productData = "";
+
+    socket.on("connect", () => {
+      console.log(`You are connected to: ${socket.id}`);
+      socket.emit("connect-to-room", id, (message) => {
+        console.log(message);
+        socket.on("productinfo", (product) => {
+          productData = product;
+          PutDatainHTML(productData);
+        });
+      });
+    });
+
+    document.getElementById("bid-button").onclick = () => {
+      GetDataForHTML();
+    };
+  });
 
   return (
     <div className={styles.productPage}>
@@ -201,8 +116,10 @@ const ProductPage = ({ id }) => {
               <span>Auction Ends in</span>
               <p>{data.time_left}</p>
             </div>
-            <input type = "textarea"></input>
-            <div className={styles.btn} id = "bid-button">BID</div>
+            <input type="textarea"></input>
+            <div className={styles.btn} id="bid-button">
+              BID
+            </div>
           </div>
           <Graph data={graphData} labels={graphLabels} />
           <div className={styles.ProductPageSescription}></div>
