@@ -1,20 +1,23 @@
 import { React, useState } from "react";
 import style from "./style.module.scss";
 import { AiFillHeart } from "react-icons/ai";
+import { BsBookmarkPlus,BsFillBookmarkCheckFill} from "react-icons/bs";
 
 export default function Card({ slides }) {
   const [isClicked, setIsClicked] = useState(false);
-  const [color, setColor] = useState("grey");
-  const [value, setValue] = useState(slides.reputation);
+  // const [color, setColor] = useState("grey");
+  const [value, setValue] = useState(slides.bookmark);
   const handleClick = () => {
     setIsClicked(!isClicked);
-    setColor(isClicked ? "grey" : "white");
-    if (isClicked) {
-      setValue((value) => value - 1);
-    } else {
-      setValue((value) => value + 1);
-    }
+    // setColor(isClicked ? "grey" : "white");
+    // if (isClicked) {
+    //   setValue((value) => !value);
+    // } else {
+    //   setValue((value) => !value);
+    // }
+    setValue(!value);
   };
+  // console.log(slides.bookmark);
   return (
     <div className={style.container}>
       <div className={style.box}>
@@ -47,13 +50,13 @@ export default function Card({ slides }) {
             <span className={style.reputation}>
               {" "}
               <button
-                className={style.like}
+                className={style.bookmark}
                 onClick={handleClick}
-                style={{ color: color }}
-              >
-                <AiFillHeart />
+              >{
+                (isClicked)? <BsFillBookmarkCheckFill />: <BsBookmarkPlus />
+              }
               </button>
-              {value}
+              {/* {value} */}
             </span>
           </>
         </div>

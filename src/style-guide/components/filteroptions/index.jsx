@@ -9,6 +9,9 @@ export default function Filteroptions() {
   function toggle() {
     setIsClicked1(!isClicked1);
   }
+  function handlebar(){
+
+  }
   console.log(isClicked1);
   return (
     <div className={styles.categories}>
@@ -22,6 +25,7 @@ export default function Filteroptions() {
           <option className={styles.categories_name}>Apparel</option>
           <option className={styles.categories_name}>Books</option>
           <option className={styles.categories_name}>Collectibles</option>
+          <option className={styles.categories_name}>Services</option>
           <option className={styles.categories_name}>Miscellanous</option>
         </select>
       </div>
@@ -39,6 +43,7 @@ export default function Filteroptions() {
             className={styles.maxi}
           ></input>
         </div>
+        <div className="btn" onClick={handlebar}>OK</div>
       </div>
     </div>
   );
