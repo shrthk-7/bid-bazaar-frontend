@@ -22,6 +22,7 @@ export default function Filteroptions() {
           <option className={styles.categories_name}>Apparel</option>
           <option className={styles.categories_name}>Books</option>
           <option className={styles.categories_name}>Collectibles</option>
+          <option className={styles.categories_name}>Services</option>
           <option className={styles.categories_name}>Miscellanous</option>
         </select>
       </div>

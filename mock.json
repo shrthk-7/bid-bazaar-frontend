@@ -6,8 +6,8 @@
     "description": "My name is Gyoubu Masataka Oniwa",
     "owner": {
       "id": "789",
-      "username": "johndoe",
-      "name": "John Doe"
+      "username": "jared_jackson",
+      "name": "Jared Jackson"
     },
     "photo": "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
     "more_photos": [
@@ -26,6 +26,7 @@
         "name": "Jane Derula"
       }
     },
+    "bookmark": false,
     "live": true,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",
@@ -47,11 +48,12 @@
   },
   {
     "id": "123457",
-    "title": "One Piece Manga Volume XIV",
+    "title": "The Poseidon of Melos Statue",
+    "description": "The statue was found in 1877 on the island of Melos. It is made of Parian marble and has a height of 2.35 metres, which makes it more than lifesize. The statue was found in several pieces, which have been reattached to one another.",
     "owner": {
       "id": "789",
-      "username": "johndoe",
-      "name": "John Doe"
+      "username": "jake_paulino",
+      "name": "Jake Paulino"
     },
     "photo": "https://i.pinimg.com/564x/31/24/04/312404537789ee67fb9924cce3cbbfa8.jpg",
     "more_photos": [
@@ -60,7 +62,7 @@
       "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
     ],
     "auction_type": "standard",
-    "category": "Books",
+    "category": "Services",
     "current_highest_bid": {
       "amount": 150.0,
       "currency": "₹",
@@ -70,6 +72,7 @@
         "name": "Jane Derula"
       }
     },
+    "bookmark": true,
     "live": true,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",
@@ -100,6 +103,7 @@
         "name": "Jane Derula"
       }
     },
+    "bookmark": false,
     "live": false,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",
@@ -113,6 +117,7 @@
       "username": "johndoe",
       "name": "John Doe"
     },
+    
     "photo": "https://i.pinimg.com/564x/65/77/59/65775950da0ed5896f416bb56d5d0e4f.jpg",
     "more_photos": [
       "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
@@ -130,6 +135,7 @@
         "name": "Jane Derula"
       }
     },
+    "bookmark": true,
     "live": true,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",
@@ -160,6 +166,7 @@
         "name": "Jane Derula"
       }
     },
+    "bookmark": false,
     "live": true,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",
@@ -190,6 +197,7 @@
         "name": "Jane Derula"
       }
     },
+    "bookmark": false,
     "live": true,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",
@@ -250,6 +258,7 @@
         "name": "Jane Derula"
       }
     },
+    "bookmark": true,
     "live": true,
     "time_left": "1d 2h 30m",
     "start_time": "2023-04-05T12:00:00Z",

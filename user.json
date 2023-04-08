@@ -1,8 +1,8 @@
 {
   "profile_photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-  "name": "Giorgio Govanna",
-  "username": "giorgio_govanna",
-  "bio": "I'm a software engineer with a passion for coding and problem-solving.",
+  "name": "Jackson Williams",
+  "username": "jackson_williams",
+  "bio": "",
   "socials": {
     "instagram": "https://www.instagram.com/tolemy_kashyap/",
     "linkedIn": "https://www.linkedin.com/in/tolemy-kashyap/",
@@ -41,11 +41,11 @@
     },
     {
       "id": "123456",
-      "title": "One Piece Manga Volume XIV",
+      "title": "The Poseidon of Melos Statue",
       "owner": {
         "id": "789",
-        "username": "johndoe",
-        "name": "John Doe"
+        "username": "jordan_clarkson",
+        "name": "Jordan Clarkson"
       },
       "photo": "https://i.pinimg.com/564x/31/24/04/312404537789ee67fb9924cce3cbbfa8.jpg",
       "more_photos": [
