@@ -14,20 +14,32 @@ import AddProduct from "@/style-guide/components/AddProduct";
 const MarketPage = () => {
   const [selectedAuctionType, setSelectedAuctionType] = useState("standard");
   const [filterOn, setFilterOn] = useState(false);
+  const [filteredCat, setFilteredCat] = useState("");
   const [AddProductOn, setAddProductOn] = useState(false);
   const [auctionData, setAuctionData] = useState({});
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("/mock.json");
+      const res = await fetch("../../../mock.json");
       const data = await res.json();
-      const filteredData = data.filter(
-        (ele) => ele.bidType === selectedAuctionType
-      );
-      setAuctionData(filteredData);
+      console.log(data);
+      if (!filterOn) {
+        const filteredData = data.filter(
+          (ele) => ele.bidType === selectedAuctionType
+        );
+        console.log(filteredData);
+        setAuctionData(filteredData);
+      } else {
+        const filteredData = data.filter(
+          (ele) =>
+            ele.category === filteredCat && ele.bidType === selectedAuctionType
+        );
+        console.log(filteredData);
+        setAuctionData(filteredData);
+      }
     }
     fetchData();
-  }, [selectedAuctionType]);
+  }, [selectedAuctionType, filterOn, filteredCat]);
 
   const handleFilter = () => {
     setFilterOn(!filterOn);
@@ -102,7 +114,12 @@ const MarketPage = () => {
             <BiFilterAlt />
             <span>Filter</span>
           </p>
-          {filterOn ? <Filteroptions /> : null}
+          {filterOn ? (
+            <Filteroptions
+              setFilteredCat={setFilteredCat}
+              setFilterOn={setFilterOn}
+            />
+          ) : null}
         </div>
         <div className={styles.mainData}>
           {/* data mapping */}

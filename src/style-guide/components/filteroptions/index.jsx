@@ -4,8 +4,10 @@ import slides from "../../../../mock.json";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { GrDown } from "react-icons/gr";
 
-export default function Filteroptions() {
+export default function Filteroptions({ setFilteredCat, setFilterOn }) {
   const [isClicked1, setIsClicked1] = useState(false);
+  // const [val, setVal] = useState("");
+
   function toggle() {
     setIsClicked1(!isClicked1);
   }
@@ -15,7 +17,14 @@ export default function Filteroptions() {
     <div className={styles.categories}>
       <div className={styles.category}>
         <div className={styles.category_title}>CATEGORIES</div>
-        <select name="category" id="category">
+        <select
+          name="category"
+          id="category"
+          onChange={(e) => {
+            setFilterOn(true);
+            setFilteredCat(e.target.value);
+          }}
+        >
           <option className={styles.categories_name} selected disabled>
             category
           </option>

@@ -9,11 +9,12 @@
       "name": "John Doe"
     },
     "photos": [
-      "https://example.com/s21ultra1.jpg",
-      "https://example.com/s21ultra2.jpg"
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
     ],
     "bidType": "standard",
-    "category": "Electronics",
+    "category": "Collectibles",
     "currentHighestBidder": {
       "_id": "6214f4b9ad4dc4d12a4f231c",
       "username": "jacksmith",
@@ -33,11 +34,11 @@
       "name": "Jane Doe"
     },
     "photos": [
-      "https://example.com/iphone12promax1.jpg",
-      "https://example.com/iphone12promax2.jpg"
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
     ],
     "bidType": "reverse",
-    "category": "Electronics",
+    "category": "Automobiles",
     "currentHighestBidder": {
       "_id": "6214f4b9ad4dc4d12a4f231c",
       "username": "jacksmith",
@@ -57,8 +58,8 @@
       "name": "Sarah Jones"
     },
     "photos": [
-      "https://example.com/nikond850_1.jpg",
-      "https://example.com/nikond850_2.jpg"
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
     ],
     "bidType": "standard",
     "category": "Photography",
@@ -205,7 +206,7 @@
       "https://example.com/s21ultra2.jpg"
     ],
     "bidType": "standard",
-    "category": "Electronics",
+    "category": "Automobiles",
     "currentHighestBidder": {
       "_id": "6214f4b9ad4dc4d12a4f231c",
       "username": "jacksmith",
@@ -229,7 +230,7 @@
       "https://example.com/iphone12promax2.jpg"
     ],
     "bidType": "reverse",
-    "category": "Electronics",
+    "category": "Automobiles",
     "currentHighestBidder": {
       "_id": "6214f4b9ad4dc4d12a4f231c",
       "username": "jacksmith",
