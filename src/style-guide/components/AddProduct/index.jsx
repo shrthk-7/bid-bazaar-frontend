@@ -47,9 +47,12 @@ const AddProduct = ({ AddProductOn, setAddProductOn }) => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             /> */}
-            <select name="category" id="Category"
+            <select
+              name="category"
+              id="Category"
               value={category}
-              onChange={(e) => setCategory(e.target.value)}>
+              onChange={(e) => setCategory(e.target.value)}
+            >
               <option selected disabled>
                 category
               </option>

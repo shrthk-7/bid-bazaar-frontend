@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import style from "./style.module.scss";
 import { AiFillHeart } from "react-icons/ai";
-import { BsBookmarkPlus,BsFillBookmarkCheckFill} from "react-icons/bs";
+import { BsBookmarkPlus, BsFillBookmarkCheckFill } from "react-icons/bs";
 
 export default function Card({ slides }) {
   const [isClicked, setIsClicked] = useState(false);
@@ -49,12 +49,8 @@ export default function Card({ slides }) {
           <>
             <span className={style.reputation}>
               {" "}
-              <button
-                className={style.bookmark}
-                onClick={handleClick}
-              >{
-                (isClicked)? <BsFillBookmarkCheckFill />: <BsBookmarkPlus />
-              }
+              <button className={style.bookmark} onClick={handleClick}>
+                {isClicked ? <BsFillBookmarkCheckFill /> : <BsBookmarkPlus />}
               </button>
               {/* {value} */}
             </span>

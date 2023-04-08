@@ -10,7 +10,7 @@
   background: transparent;
   backdrop-filter: blur(0.8rem);
   z-index: 5;
-  
+
   .bid {
     @include mixins.flexCenter;
     flex-direction: column;

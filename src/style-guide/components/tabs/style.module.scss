@@ -23,9 +23,9 @@
     &::-webkit-scrollbar {
       display: none;
     }
-  
+
     scrollbar-width: none;
-  
+
     &::-moz-scrollbar {
       display: none;
     }
@@ -70,15 +70,19 @@
       // justify-content: center;
       // position: absolute;
       // background-color: red($color: #000000);
-      bottom: 8vw;
-      left: 14vw;
       // padding-left: 1rem;
-      .currentbids{
-        padding-left: 4rem;
-        // padding-right: 0rem;
-      }
-      .solditems{
-        margin-right: 0rem;
+      width: 100% !important;
+      bottom: 0 !important;
+      justify-content: space-between;
+      gap: 0.5rem;
+
+      .currentbids,
+      .boughtitems,
+      .solditems,
+      .saveditems {
+        font-size: 1rem;
+        min-width: 25%;
+        display: block;
       }
     }
   }

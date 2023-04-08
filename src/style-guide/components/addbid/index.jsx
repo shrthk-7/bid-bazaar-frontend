@@ -6,7 +6,6 @@ export default function Addbid() {
     console.log("clicked");
   };
   return (
-
     <div className={styles.AddProductWrapper}>
       <div className={style.bid}>
         <input

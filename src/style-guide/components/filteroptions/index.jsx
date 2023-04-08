@@ -9,9 +9,7 @@ export default function Filteroptions() {
   function toggle() {
     setIsClicked1(!isClicked1);
   }
-  function handlebar() {
-
-  }
+  function handlebar() {}
   console.log(isClicked1);
   return (
     <div className={styles.categories}>
@@ -21,12 +19,24 @@ export default function Filteroptions() {
           <option className={styles.categories_name} selected disabled>
             category
           </option>
-          <option className={styles.categories_name} value="Automobiles">Automobiles</option>
-          <option className={styles.categories_name} value="Apparel">Apparel</option>
-          <option className={styles.categories_name} value="Books">Books</option>
-          <option className={styles.categories_name} value="Collectibles">Collectibles</option>
-          <option className={styles.categories_name} value="Services">Services</option>
-          <option className={styles.categories_name} value="Miscellanous">Miscellanous</option>
+          <option className={styles.categories_name} value="Automobiles">
+            Automobiles
+          </option>
+          <option className={styles.categories_name} value="Apparel">
+            Apparel
+          </option>
+          <option className={styles.categories_name} value="Books">
+            Books
+          </option>
+          <option className={styles.categories_name} value="Collectibles">
+            Collectibles
+          </option>
+          <option className={styles.categories_name} value="Services">
+            Services
+          </option>
+          <option className={styles.categories_name} value="Miscellanous">
+            Miscellanous
+          </option>
         </select>
       </div>
       <div className={styles.pricerange}>
@@ -43,7 +53,9 @@ export default function Filteroptions() {
             className={styles.maxi}
           ></input>
         </div>
-        <div className="btn" onClick={handlebar}>OK</div>
+        <div className="btn" onClick={handlebar}>
+          OK
+        </div>
       </div>
     </div>
   );

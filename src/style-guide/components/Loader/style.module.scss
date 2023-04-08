@@ -7,17 +7,17 @@
   background: var(--black);
   color: var(--white);
   font-size: 3rem;
-  p{
+  p {
     animation: animate 1s ease-in-out infinite alternate;
     transition: all 0.5s ease-in-out;
   }
 }
 
 @keyframes animate {
-  0%{
+  0% {
     scale: 0.8;
   }
-  100%{
+  100% {
     scale: 1.2;
   }
 }
