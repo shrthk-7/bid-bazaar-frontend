@@ -1,28 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import ProductPage from "@/style-guide/page-components/productPage";
+import { SocketContext } from "@/context/socket-context";
+import socketio from "socket.io-client";
 
 const Product = () => {
-  // const [data, setData] = useState([]);
-  // const [loading, setLoading] = useState(true);
   const router = useRouter();
   const { id } = router.query;
+
+  let socket = socketio(process.env.NEXT_PUBLIC_BACKEND_URL, {
+    autoConnect: false,
+  });
   useEffect(() => {
-    try {
-      // fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/product/${id}`)
-      //   .then((res) => res.json())
-      //   .then((response) => {
-      //      setData(response);
-      //   })
-      //   .catch((err) => {
-      //     console.log({err});
-      //   })
-      //   .finally(() => setLoading(false))
-    } catch (error) {
-      // console.log({error});
-    }
+    socket.connect();
+    return () => socket.close();
   }, []);
-  return <ProductPage id={id} />;
+
+  return (
+    <SocketContext.Provider value={{ socket: socket }}>
+      <ProductPage id={id} />
+    </SocketContext.Provider>
+  );
 };
 
 export default Product;

@@ -24,9 +24,9 @@ const Navbar = ({ mobileHamClicked }) => {
         </div>
         <div className={styles.callToAction}>
           {auth.isLoggedIn ? (
-            <SignOut login={auth.login} />
+            <SignOut logout={auth.logout} />
           ) : (
-            <SignIn logout={auth.logout} />
+            <SignIn login={auth.login} />
           )}
         </div>
       </div>

@@ -1,16 +1,14 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState, useEffect } from "react";
 import styles from "./style.module.scss";
-// import allData from "../../../../mock.json";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import io from "socket.io-client";
 
 import { Graph } from "@/style-guide/components/graph";
 import { formatDate } from "@/utils/formatDate";
+import { SocketContext } from "@/context/socket-context";
 
 const tempData = {
   _id: "643051504188fe9e8eefc7d5",
@@ -93,6 +91,8 @@ const tempData = {
 };
 
 const ProductPage = ({ id }) => {
+  const { socket } = useContext(SocketContext);
+
   const [timeLeft, setTimeLeft] = useState("loading");
   const [data, setData] = useState(tempData);
   let isLive = Date.now() >= data.start && Date.now() <= data.end;
@@ -114,30 +114,22 @@ const ProductPage = ({ id }) => {
     setTimeLeft(() => formattedDate);
     setTimeout(() => keepUpdatingTimeLeft(), 60 * 1000);
   };
-  const socket = io(`${process.env.NEXT_PUBLIC_API_URL}`);
 
   const handleNewBid = () => {
     const userId = localStorage.getItem("_id");
-    if (!userId) return;
+    if (!userId) return console.log("not found");
     socket.emit("newBid", userId, id, Math.random());
-    socket.close();
   };
 
   useEffect(() => {
-    if (socket.disconnected) {
-      console.log("abcd");
-      socket.connect();
-    }
-    socket.on("connect", () => {
-      socket.emit("connect-to-room", id, (message) => {
-        socket.on("productinfo", (product) => {
-          setData(product);
-        });
-      });
+    if (!socket) return;
+    socket.emit("connect-to-room", id);
+    socket.on("productinfo", (product) => {
+      setData(product);
     });
     keepUpdatingTimeLeft();
-    return () => socket.close();
-  }, []);
+    return () => socket.off("productinfo");
+  }, [socket]);
 
   return (
     <div className={styles.productPage}>
