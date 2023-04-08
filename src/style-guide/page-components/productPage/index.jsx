@@ -118,7 +118,7 @@ const ProductPage = ({ id }) => {
   const handleNewBid = () => {
     const userId = localStorage.getItem("_id");
     if (!userId) return console.log("not found");
-    socket.emit("newBid", userId, id, Math.random());
+    socket.emit("newBid", userId, id, Date.now());
   };
 
   const [isLiked, setIsLiked] = useState(false);
@@ -138,6 +138,7 @@ const ProductPage = ({ id }) => {
     if (!socket) return;
     socket.emit("connect-to-room", id);
     socket.on("productinfo", (product) => {
+      console.log(product);
       setData(product);
     });
     keepUpdatingTimeLeft();
