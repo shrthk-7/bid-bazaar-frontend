@@ -1,11 +1,12 @@
 import style from "./style.module.scss";
 import { AiFillGoogleCircle } from "react-icons/ai";
-import { signInWithGoogle } from "@/utils/firebase";
+// import { signInWithGoogle } from "@/utils/firebase";
 
 const SignIn = ({ login }) => {
   const handleSignIn = async () => {
     try {
-      const { user } = await signInWithGoogle();
+      // const { user } = await signInWithGoogle();
+      const user = 1;
       if (!user) {
         alert("User Sign up failed");
         return;

@@ -2,6 +2,7 @@
 
 .card {
   // background-color: var(--profilecard-bg1);
+  @include mixins.flexCenter;
   padding: 2vw;
   border-top-left-radius: 4vw;
   border-bottom-left-radius: 4vw;
@@ -19,7 +20,7 @@
     @include mixins.flexCenter;
     flex-direction: column;
     color: white;
-    height: 38rem;
+    height: 33rem;
     width: 18rem;
     background-color: var(--card-bg1);
     .profilepic {

@@ -1,0 +1,105 @@
+@use "../../../styles/mixins.scss";
+
+.AddProductWrapper {
+  @include mixins.flexCenter;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+  backdrop-filter: blur(0.8rem);
+  z-index: 5;
+
+  .AddProduct {
+    @include mixins.flexCenter;
+    flex-direction: column;
+    align-items: flex-start;
+    // height: 35rem;
+    width: min(35rem, 90vw);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    color: var(--white);
+    border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(1rem);
+    transform: translateY(1rem);
+
+    p {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+    }
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    div {
+      @include mixins.flexCenter;
+      gap: 1rem;
+      font-size: 1.3rem;
+
+      label {
+        min-width: 10ch;
+      }
+
+      input {
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: none;
+        border-radius: 0.3rem;
+        font-weight: 500;
+      }
+
+      .imageUploaded {
+        height: 7rem;
+        min-width: 7rem;
+        max-width: 80%;
+        object-fit: cover;
+        background: var(--black);
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        display: block;
+        overflow-x: auto;
+        max-width: 90vw;
+        // flex-wrap: nowrap;
+      }
+
+      .imageUploaded img {
+        width: 10rem;
+        object-fit: cover;
+      }
+    }
+    .imageUploadSection {
+      flex-direction: column !important;
+    }
+
+    // transform: translateY(1rem);
+  }
+}
+
+@media (max-width: 769px) {
+  .AddProductWrapper {
+    width: 99vw !important;
+    .AddProduct {
+      transform: translateY(1rem);
+      .imageOverflow {
+        max-width: 10rem;
+      }
+      p {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+    }
+  }
+}
