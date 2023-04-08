@@ -2,11 +2,11 @@
 
 .navbar {
   @include mixins.flexCenter;
-  z-index: 5;
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   // height: 10rem;
   background: transparent;
   padding: 1rem 1.5rem;
@@ -58,7 +58,7 @@
     .navbar {
       @include mixins.flexCenter;
       flex-direction: column;
-      z-index: 5;
+      z-index: 10;
       position: absolute;
       top: 0;
       left: unset;

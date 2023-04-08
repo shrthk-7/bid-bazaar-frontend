@@ -44,7 +44,7 @@
 
   .cards {
     @include mixins.flexCenter;
-    width: 67vw;
+    width: 100%;
     flex-wrap: wrap;
   }
 }
