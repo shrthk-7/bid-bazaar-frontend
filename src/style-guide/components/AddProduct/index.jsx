@@ -2,25 +2,45 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Spinner from "../spinner";
 
-const AddProduct = ({ AddProductOn, setAddProductOn }) => {
+const AddProduct = ({ AddProductOn, setAddProductOn, bidType }) => {
   const [title, setTitle] = useState();
   const [images, setImages] = useState([]);
   const [category, setCategory] = useState();
   const [start, setStart] = useState();
   const [end, setEnd] = useState();
   const [loading, setLoading] = useState(false);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const sendForm = new FormData();
-    sendForm.set("title", title);
-    sendForm.set("images", images);
-    sendForm.set("category", category);
-    sendForm.set("start", start);
-    sendForm.set("end", end);
-    console.log({ category });
-    // post request and loading=false
+
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/marketplace/new`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title,
+            images,
+            category,
+            start,
+            end,
+            photos: images,
+            token: localStorage.getItem("token"),
+            bidType: bidType,
+          }),
+        }
+      );
+      const data = await res.json();
+      setLoading(false);
+    } catch (error) {
+      console.log({ error });
+      alert("product creation failed");
+    }
   };
+
   return (
     <>
       {loading ? <Spinner /> : null}

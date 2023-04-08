@@ -5,9 +5,6 @@ import { BsBookmarkPlus, BsFillBookmarkCheckFill } from "react-icons/bs";
 export default function Card({ slides }) {
   const [isClicked, setIsClicked] = useState(false);
   const [value, setValue] = useState(slides.bookmark);
-
-  console.log(slides.photos);
-
   const [isLive, setIsLive] = useState(
     () => Date.now() >= slides.start && Date.now() < slides.end
   );

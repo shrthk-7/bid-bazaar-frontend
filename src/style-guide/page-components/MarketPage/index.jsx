@@ -47,6 +47,7 @@ const MarketPage = () => {
         <AddProduct
           AddProductOn={AddProductOn}
           setAddProductOn={setAddProductOn}
+          bidType={selectedAuctionType}
         />
       ) : null}
       <div className={styles.heroBloblight}></div>
