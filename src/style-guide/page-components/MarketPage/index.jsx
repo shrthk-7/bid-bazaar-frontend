@@ -20,9 +20,10 @@ const MarketPage = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("../../../mock.json");
-      const data = await res.json();
-      console.log(data);
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/marketplace`
+      );
+      const data = (await res.json()).products;
       if (!filterOn) {
         const filteredData = data.filter(
           (ele) => ele.bidType === selectedAuctionType
