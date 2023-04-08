@@ -6,14 +6,17 @@ export default function Addbid() {
     console.log("clicked");
   };
   return (
-    <div className={style.bid}>
-      <input
-        type="number"
-        className={style.money}
-        placeholder="In dollars"
-      ></input>
-      <div onClick={handlebar} className={style.btn}>
-        OK
+
+    <div className={styles.AddProductWrapper}>
+      <div className={style.bid}>
+        <input
+          type="number"
+          className={style.money}
+          placeholder="In dollars"
+        ></input>
+        <div onClick={handlebar} className={style.btn}>
+          OK
+        </div>
       </div>
     </div>
   );

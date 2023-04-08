@@ -9,7 +9,7 @@ export default function Filteroptions() {
   function toggle() {
     setIsClicked1(!isClicked1);
   }
-  function handlebar(){
+  function handlebar() {
 
   }
   console.log(isClicked1);
@@ -21,12 +21,12 @@ export default function Filteroptions() {
           <option className={styles.categories_name} selected disabled>
             category
           </option>
-          <option className={styles.categories_name}>Automobiles</option>
-          <option className={styles.categories_name}>Apparel</option>
-          <option className={styles.categories_name}>Books</option>
-          <option className={styles.categories_name}>Collectibles</option>
-          <option className={styles.categories_name}>Services</option>
-          <option className={styles.categories_name}>Miscellanous</option>
+          <option className={styles.categories_name} value="Automobiles">Automobiles</option>
+          <option className={styles.categories_name} value="Apparel">Apparel</option>
+          <option className={styles.categories_name} value="Books">Books</option>
+          <option className={styles.categories_name} value="Collectibles">Collectibles</option>
+          <option className={styles.categories_name} value="Services">Services</option>
+          <option className={styles.categories_name} value="Miscellanous">Miscellanous</option>
         </select>
       </div>
       <div className={styles.pricerange}>

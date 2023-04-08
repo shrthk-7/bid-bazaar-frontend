@@ -105,7 +105,7 @@
           border-right: 1px solid var(--white);
           div {
             @include mixins.flexCenter;
-            color: rgb(153, 85, 207);
+            color: var(--primary-color-3);
             h2 {
               font-size: 2.5rem;
             }
@@ -121,7 +121,7 @@
           margin-right: 1rem;
           p {
             font-size: 3rem;
-            color: rgb(153, 85, 207);
+            color: var(--primary-color-3);
             font-weight: 900;
           }
         }
@@ -133,8 +133,8 @@
   padding: 0.5rem 1rem;
   background: radial-gradient(
     circle at bottom right,
-    rgb(95, 30, 148),
-    rgb(153, 85, 207)
+    var(--btn-bg-1),
+    var(--btn-bg-2)
   );
   border-radius: 0.3rem;
   user-select: none;
@@ -142,7 +142,7 @@
 
 @media (max-width: 769px) {
   .productCard {
-    min-height: 100vh !important;
+    min-height: 105vh !important;
     width: 100vw !important;
     flex-direction: column;
     justify-content: flex-start !important;
@@ -159,6 +159,11 @@
     .title {
       font-size: 2rem !important;
       font-family: Anton;
+    }
+    .smallData{
+      p{
+        display: none !important;
+      }
     }
     .bidData {
       @include mixins.flexCenter;
@@ -187,7 +192,7 @@
         padding: 1rem 0;
         p {
           font-size: 2rem !important;
-          color: rgb(153, 85, 207);
+          color: var(--primary-color-3);
           font-weight: 900;
         }
       }

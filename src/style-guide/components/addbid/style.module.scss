@@ -1,47 +1,59 @@
 @use "../../../styles/mixins.scss";
 
-.bid {
+.AddProductWrapper {
   @include mixins.flexCenter;
-  flex-direction: column;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 17rem;
-  height: 10rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+  backdrop-filter: blur(0.8rem);
+  z-index: 5;
+  
+  .bid {
+    @include mixins.flexCenter;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 17rem;
+    height: 10rem;
+    background-color: var(--module-bg);
 
-  .money {
-    width: 13rem;
-    border-radius: 0.3rem;
-    outline: none;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: medium;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-  }
+    .money {
+      width: 13rem;
+      border-radius: 0.3rem;
+      outline: none;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: medium;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
 
-  .btn {
-    color: white;
-    padding: 0.5rem 1rem;
-    background: radial-gradient(
-      circle at bottom right,
-      rgb(95, 30, 148),
-      rgb(153, 85, 207)
-    );
-    border-radius: 0.3rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    &:hover {
+    .btn {
+      color: white;
+      padding: 0.5rem 1rem;
       background: radial-gradient(
-        circle at top right,
+        circle at bottom right,
         rgb(95, 30, 148),
         rgb(153, 85, 207)
       );
+      border-radius: 0.3rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      &:hover {
+        background: radial-gradient(
+          circle at top right,
+          rgb(95, 30, 148),
+          rgb(153, 85, 207)
+        );
+      }
     }
   }
 }

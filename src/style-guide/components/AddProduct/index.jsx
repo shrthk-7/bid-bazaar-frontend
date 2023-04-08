@@ -18,7 +18,7 @@ const AddProduct = ({ AddProductOn, setAddProductOn }) => {
     sendForm.set("category", category);
     sendForm.set("start", start);
     sendForm.set("end", end);
-    console.log({ sendForm });
+    console.log({ category });
     // post request and loading=false
   };
   return (
@@ -41,12 +41,25 @@ const AddProduct = ({ AddProductOn, setAddProductOn }) => {
           </div>
           <div>
             <label htmlFor="Category">Category</label>
-            <input
+            {/* <input
               type="text"
               id="Category"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-            />
+            /> */}
+            <select name="category" id="Category"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}>
+              <option selected disabled>
+                category
+              </option>
+              <option value="Automobiles">Automobiles</option>
+              <option value="Apparel">Apparel</option>
+              <option value="Books">Books</option>
+              <option value="Collectibles">Collectibles</option>
+              <option value="Services">Services</option>
+              <option value="Miscellanous">Miscellanous</option>
+            </select>
           </div>
           <div>
             <label htmlFor="start">Start Bid</label>

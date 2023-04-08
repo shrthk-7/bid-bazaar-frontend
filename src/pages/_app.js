@@ -5,6 +5,7 @@ import { useEffect, useCallback, useState } from "react";
 
 export default function App({ Component, pageProps }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [theme, setTheme] = useState(false);
 
   const logout = useCallback(() => {
     localStorage.removeItem("_id");
