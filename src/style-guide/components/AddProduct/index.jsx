@@ -9,18 +9,46 @@ const AddProduct = ({ AddProductOn, setAddProductOn }) => {
   const [start, setStart] = useState();
   const [end, setEnd] = useState();
   const [loading, setLoading] = useState(false);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const sendForm = new FormData();
-    sendForm.set("title", title);
-    sendForm.set("images", images);
-    sendForm.set("category", category);
-    sendForm.set("start", start);
-    sendForm.set("end", end);
-    console.log({ category });
-    // post request and loading=false
+
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      const sendForm = new FormData();
+      sendForm.set("title", title);
+      sendForm.set("images", images);
+      sendForm.set("category", category);
+      sendForm.set("start", start);
+      sendForm.set("end", end);
+      // sendForm.set("images", images);
+      sendForm.set("token", localStorage.getItem("token"));
+
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/marketplace/new`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title,
+            images,
+            category,
+            start,
+            end,
+            token: localStorage.getItem("token"),
+          }),
+        }
+      );
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.log({ error });
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <>
       {loading ? <Spinner /> : null}
