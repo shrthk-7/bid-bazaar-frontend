@@ -92,8 +92,8 @@ const tempData = {
 
 const ProductPage = ({ id }) => {
   const { socket } = useContext(SocketContext);
-
   const [timeLeft, setTimeLeft] = useState("loading");
+  
   const [data, setData] = useState(tempData);
   let isLive = Date.now() >= data.start && Date.now() <= data.end;
   const graphLabels = [];
@@ -102,7 +102,7 @@ const ProductPage = ({ id }) => {
     graphLabels.push(ele.time);
     graphData.push(ele.bid);
   });
-
+  
   const keepUpdatingTimeLeft = () => {
     const timeLeftInMS = new Date(data.end) - Date.now();
     if (timeLeftInMS <= 0) {
@@ -114,12 +114,25 @@ const ProductPage = ({ id }) => {
     setTimeLeft(() => formattedDate);
     setTimeout(() => keepUpdatingTimeLeft(), 60 * 1000);
   };
-
+  
   const handleNewBid = () => {
     const userId = localStorage.getItem("_id");
     if (!userId) return console.log("not found");
     socket.emit("newBid", userId, id, Math.random());
   };
+  
+  const [isLiked, setIsLiked] = useState(false)
+  const [reputation, setReputation] = useState(data.reputation)
+  const handleLike = () => {
+    const event = !isLiked
+    const userId = localStorage.getItem("_id");
+    setIsLiked((prevState) => {
+      if(prevState) setReputation(rep => rep-1);
+      else setReputation(rep => rep+1)
+      return !prevState
+    })
+    socket.emit('Like-event', userId, id, event);
+  }
 
   useEffect(() => {
     if (!socket) return;
@@ -163,9 +176,10 @@ const ProductPage = ({ id }) => {
               <p>{data.owner.name}</p>
               <span>Owner</span>
             </div>
-            <div>
-              <AiOutlineHeart />
-              <span>{data.reputation}</span>
+            <div onClick={handleLike}>
+              {isLiked ? <AiFillHeart/> : <AiOutlineHeart/>}
+              {/* {`${isLiked}`} */}
+              <span>{reputation}</span>
             </div>
           </div>
           <div className={styles.bidData}>
