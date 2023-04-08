@@ -1,0 +1,386 @@
+[
+  {
+    "_id": "6214f4b9ad4dc4d12a4f231f",
+    "title": "Samsung Galaxy S21 Ultra 5G",
+    "description": "Brand new Samsung Galaxy S21 Ultra 5G with original accessories and box.",
+    "owner": {
+      "_id": "6214f4b9ad4dc4d12a4f231a",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://example.com/s21ultra1.jpg",
+      "https://example.com/s21ultra2.jpg"
+    ],
+    "bidType": "standard",
+    "category": "Electronics",
+    "currentHighestBidder": {
+      "_id": "6214f4b9ad4dc4d12a4f231c",
+      "username": "jacksmith",
+      "name": "Jack Smith"
+    },
+    "currentHighestBid": 1000,
+    "start": "2022-04-15T10:00:00.000Z",
+    "reputation": 4.5
+  },
+  {
+    "_id": "6214f4b9ad4dc4d12a4f2320",
+    "title": "Apple iPhone 12 Pro Max",
+    "description": "Brand new Apple iPhone 12 Pro Max with original accessories and box.",
+    "owner": {
+      "_id": "6214f4b9ad4dc4d12a4f231b",
+      "username": "janedoe",
+      "name": "Jane Doe"
+    },
+    "photos": [
+      "https://example.com/iphone12promax1.jpg",
+      "https://example.com/iphone12promax2.jpg"
+    ],
+    "bidType": "reverse",
+    "category": "Electronics",
+    "currentHighestBidder": {
+      "_id": "6214f4b9ad4dc4d12a4f231c",
+      "username": "jacksmith",
+      "name": "Jack Smith"
+    },
+    "currentHighestBid": 1200,
+    "start": "2022-05-01T12:00:00.000Z",
+    "reputation": 4.8
+  },
+  {
+    "_id": "6214f4b9ad4dc4d12a4f2321",
+    "title": "Nikon D850 DSLR Camera",
+    "description": "Used Nikon D850 DSLR camera in excellent condition with original accessories.",
+    "owner": {
+      "_id": "6214f4b9ad4dc4d12a4f231d",
+      "username": "sarahjones",
+      "name": "Sarah Jones"
+    },
+    "photos": [
+      "https://example.com/nikond850_1.jpg",
+      "https://example.com/nikond850_2.jpg"
+    ],
+    "bidType": "standard",
+    "category": "Photography",
+    "currentHighestBidder": {
+      "_id": "6214f4b9ad4dc4d12a4f231e",
+      "username": "janedoe",
+      "name": "Jane Doe"
+    },
+    "currentHighestBid": 2200,
+    "start": "2022-04-30T10:00:00.000Z",
+    "reputation": 4.2
+  },
+  {
+    "_id": "643051504188fe9e8eefc7d5",
+    "title": "One Piece Manga Volume XIV",
+    "description": "My name is Gyoubu Masataka Oniwa",
+    "owner": {
+      "_id": "789",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+    ],
+    "bidType": "reverse",
+    "category": "Books",
+    "currentHighestBidder": {
+      "_id": "456",
+      "username": "jasonderula",
+      "name": "Jane Derula"
+    },
+    "currentHighestBid": 150,
+    "start": "2023-04-05T12:00:00Z",
+    "reputation": 120,
+    "bidHistory": [
+      {
+        "time": "2023-04-05T12:00:00Z",
+        "bid": "456"
+      },
+      {
+        "time": "2023-04-07T12:00:00Z",
+        "bid": "500"
+      },
+      {
+        "time": "2023-04-10T12:00:00Z",
+        "bid": "600"
+      }
+    ]
+  },
+  {
+    "_id": "643051504188fe9e8eefc7d5",
+    "title": "standard book bid",
+    "description": "My name is Gyoubu Masataka Oniwa",
+    "owner": {
+      "_id": "789",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+    ],
+    "bidType": "standard",
+    "category": "Books",
+    "currentHighestBidder": {
+      "_id": "456",
+      "username": "jasonderula",
+      "name": "Jane Derula"
+    },
+    "currentHighestBid": 150,
+    "start": "2023-04-05T12:00:00Z",
+    "reputation": 120,
+    "bidHistory": [
+      {
+        "time": "2023-04-05T12:00:00Z",
+        "bid": "456"
+      },
+      {
+        "time": "2023-04-07T12:00:00Z",
+        "bid": "500"
+      },
+      {
+        "time": "2023-04-10T12:00:00Z",
+        "bid": "600"
+      }
+    ]
+  },
+  {
+    "_id": "643051504188fe9e8eefc7d5",
+    "title": "anonymous book bid",
+    "description": "My name is Gyoubu Masataka Oniwa",
+    "owner": {
+      "_id": "789",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+    ],
+    "bidType": "anonymous",
+    "category": "Books",
+    "currentHighestBidder": {
+      "_id": "456",
+      "username": "jasonderula",
+      "name": "Jane Derula"
+    },
+    "currentHighestBid": 150,
+    "start": "2023-04-05T12:00:00Z",
+    "reputation": 120,
+    "bidHistory": [
+      {
+        "time": "2023-04-05T12:00:00Z",
+        "bid": "456"
+      },
+      {
+        "time": "2023-04-07T12:00:00Z",
+        "bid": "500"
+      },
+      {
+        "time": "2023-04-10T12:00:00Z",
+        "bid": "600"
+      }
+    ]
+  },
+  {
+    "_id": "6214f4b9ad4dc4d12a4f231f",
+    "title": "Samsung Galaxy S21 Ultra 5G",
+    "description": "Brand new Samsung Galaxy S21 Ultra 5G with original accessories and box.",
+    "owner": {
+      "_id": "6214f4b9ad4dc4d12a4f231a",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://example.com/s21ultra1.jpg",
+      "https://example.com/s21ultra2.jpg"
+    ],
+    "bidType": "standard",
+    "category": "Electronics",
+    "currentHighestBidder": {
+      "_id": "6214f4b9ad4dc4d12a4f231c",
+      "username": "jacksmith",
+      "name": "Jack Smith"
+    },
+    "currentHighestBid": 1000,
+    "start": "2022-04-15T10:00:00.000Z",
+    "reputation": 4.5
+  },
+  {
+    "_id": "6214f4b9ad4dc4d12a4f2320",
+    "title": "Apple iPhone 12 Pro Max",
+    "description": "Brand new Apple iPhone 12 Pro Max with original accessories and box.",
+    "owner": {
+      "_id": "6214f4b9ad4dc4d12a4f231b",
+      "username": "janedoe",
+      "name": "Jane Doe"
+    },
+    "photos": [
+      "https://example.com/iphone12promax1.jpg",
+      "https://example.com/iphone12promax2.jpg"
+    ],
+    "bidType": "reverse",
+    "category": "Electronics",
+    "currentHighestBidder": {
+      "_id": "6214f4b9ad4dc4d12a4f231c",
+      "username": "jacksmith",
+      "name": "Jack Smith"
+    },
+    "currentHighestBid": 1200,
+    "start": "2022-05-01T12:00:00.000Z",
+    "reputation": 4.8
+  },
+  {
+    "_id": "6214f4b9ad4dc4d12a4f2321",
+    "title": "Nikon D850 DSLR Camera",
+    "description": "Used Nikon D850 DSLR camera in excellent condition with original accessories.",
+    "owner": {
+      "_id": "6214f4b9ad4dc4d12a4f231d",
+      "username": "sarahjones",
+      "name": "Sarah Jones"
+    },
+    "photos": [
+      "https://example.com/nikond850_1.jpg",
+      "https://example.com/nikond850_2.jpg"
+    ],
+    "bidType": "standard",
+    "category": "Photography",
+    "currentHighestBidder": {
+      "_id": "6214f4b9ad4dc4d12a4f231e",
+      "username": "janedoe",
+      "name": "Jane Doe"
+    },
+    "currentHighestBid": 2200,
+    "start": "2022-04-30T10:00:00.000Z",
+    "reputation": 4.2
+  },
+  {
+    "_id": "643051504188fe9e8eefc7d5",
+    "title": "One Piece Manga Volume XIV",
+    "description": "My name is Gyoubu Masataka Oniwa",
+    "owner": {
+      "_id": "789",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+    ],
+    "bidType": "reverse",
+    "category": "Books",
+    "currentHighestBidder": {
+      "_id": "456",
+      "username": "jasonderula",
+      "name": "Jane Derula"
+    },
+    "currentHighestBid": 150,
+    "start": "2023-04-05T12:00:00Z",
+    "reputation": 120,
+    "bidHistory": [
+      {
+        "time": "2023-04-05T12:00:00Z",
+        "bid": "456"
+      },
+      {
+        "time": "2023-04-07T12:00:00Z",
+        "bid": "500"
+      },
+      {
+        "time": "2023-04-10T12:00:00Z",
+        "bid": "600"
+      }
+    ]
+  },
+  {
+    "_id": "643051504188fe9e8eefc7d5",
+    "title": "standard book bid",
+    "description": "My name is Gyoubu Masataka Oniwa",
+    "owner": {
+      "_id": "789",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+    ],
+    "bidType": "standard",
+    "category": "Books",
+    "currentHighestBidder": {
+      "_id": "456",
+      "username": "jasonderula",
+      "name": "Jane Derula"
+    },
+    "currentHighestBid": 150,
+    "start": "2023-04-05T12:00:00Z",
+    "reputation": 120,
+    "bidHistory": [
+      {
+        "time": "2023-04-05T12:00:00Z",
+        "bid": "456"
+      },
+      {
+        "time": "2023-04-07T12:00:00Z",
+        "bid": "500"
+      },
+      {
+        "time": "2023-04-10T12:00:00Z",
+        "bid": "600"
+      }
+    ]
+  },
+  {
+    "_id": "643051504188fe9e8eefc7d5",
+    "title": "anonymous book bid",
+    "description": "My name is Gyoubu Masataka Oniwa",
+    "owner": {
+      "_id": "789",
+      "username": "johndoe",
+      "name": "John Doe"
+    },
+    "photos": [
+      "https://i.pinimg.com/736x/00/a0/b1/00a0b19192f3ce6dd34bd434c2d6841f.jpg",
+      "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/One-Piece-Luffy-King-of-Pirates.jpg",
+      "https://preview.redd.it/4eeesam0tcp81.jpg?width=640&crop=smart&auto=webp&s=a7ae18fe0157fd767685c32f8e1c714f27e35a36",
+      "https://qph.cf2.quoracdn.net/main-qimg-3b2663d31c1abb07a9b6548c90ed27c2-pjlq"
+    ],
+    "bidType": "anonymous",
+    "category": "Books",
+    "currentHighestBidder": {
+      "_id": "456",
+      "username": "jasonderula",
+      "name": "Jane Derula"
+    },
+    "currentHighestBid": 150,
+    "start": "2023-04-05T12:00:00Z",
+    "reputation": 120,
+    "bidHistory": [
+      {
+        "time": "2023-04-05T12:00:00Z",
+        "bid": "456"
+      },
+      {
+        "time": "2023-04-07T12:00:00Z",
+        "bid": "500"
+      },
+      {
+        "time": "2023-04-10T12:00:00Z",
+        "bid": "600"
+      }
+    ]
+  }
+]

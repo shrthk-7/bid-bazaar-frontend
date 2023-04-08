@@ -92,8 +92,8 @@ const tempData = {
 
 const ProductPage = ({ id }) => {
   const { socket } = useContext(SocketContext);
-
   const [timeLeft, setTimeLeft] = useState("loading");
+
   const [data, setData] = useState(tempData);
   let isLive = Date.now() >= data.start && Date.now() <= data.end;
   const graphLabels = [];
@@ -119,6 +119,19 @@ const ProductPage = ({ id }) => {
     const userId = localStorage.getItem("_id");
     if (!userId) return console.log("not found");
     socket.emit("newBid", userId, id, Math.random());
+  };
+
+  const [isLiked, setIsLiked] = useState(false);
+  const [reputation, setReputation] = useState(data.reputation);
+  const handleLike = () => {
+    const event = !isLiked;
+    const userId = localStorage.getItem("_id");
+    setIsLiked((prevState) => {
+      if (prevState) setReputation((rep) => rep - 1);
+      else setReputation((rep) => rep + 1);
+      return !prevState;
+    });
+    socket.emit("Like-event", userId, id, event);
   };
 
   useEffect(() => {
@@ -163,9 +176,10 @@ const ProductPage = ({ id }) => {
               <p>{data.owner.name}</p>
               <span>Owner</span>
             </div>
-            <div>
-              <AiOutlineHeart />
-              <span>{data.reputation}</span>
+            <div onClick={handleLike}>
+              {isLiked ? <AiFillHeart /> : <AiOutlineHeart />}
+              {/* {`${isLiked}`} */}
+              <span>{reputation}</span>
             </div>
           </div>
           <div className={styles.bidData}>
