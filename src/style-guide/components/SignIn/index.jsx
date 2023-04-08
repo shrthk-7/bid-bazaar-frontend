@@ -6,7 +6,6 @@ const SignIn = ({ login }) => {
   const handleSignIn = async () => {
     try {
       const { user } = await signInWithGoogle();
-      // const user = 1;
       if (!user) {
         alert("User Sign up failed");
         return;

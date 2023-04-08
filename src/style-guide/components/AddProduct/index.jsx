@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Spinner from "../spinner";
 
-const AddProduct = ({ AddProductOn, setAddProductOn }) => {
+const AddProduct = ({ AddProductOn, setAddProductOn, bidType }) => {
   const [title, setTitle] = useState();
   const [images, setImages] = useState([]);
   const [category, setCategory] = useState();
@@ -14,15 +14,6 @@ const AddProduct = ({ AddProductOn, setAddProductOn }) => {
     try {
       e.preventDefault();
       setLoading(true);
-      const sendForm = new FormData();
-      sendForm.set("title", title);
-      sendForm.set("images", images);
-      sendForm.set("category", category);
-      sendForm.set("start", start);
-      sendForm.set("end", end);
-      // sendForm.set("images", images);
-      sendForm.set("token", localStorage.getItem("token"));
-
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/marketplace/new`,
         {
@@ -36,16 +27,17 @@ const AddProduct = ({ AddProductOn, setAddProductOn }) => {
             category,
             start,
             end,
+            photos: images,
             token: localStorage.getItem("token"),
+            bidType: bidType,
           }),
         }
       );
       const data = await res.json();
-      console.log(data);
+      setLoading(false);
     } catch (error) {
       console.log({ error });
-    } finally {
-      setLoading(false);
+      alert("product creation failed");
     }
   };
 
