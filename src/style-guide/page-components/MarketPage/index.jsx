@@ -7,7 +7,6 @@ import {
   BiMessageAltAdd,
 } from "react-icons/bi";
 import { RiAuctionLine } from "react-icons/ri";
-import data from "../../../../mock.json";
 import Card from "@/style-guide/components/card";
 import Filteroptions from "@/style-guide/components/filteroptions";
 import AddProduct from "@/style-guide/components/AddProduct";
@@ -16,26 +15,32 @@ const MarketPage = () => {
   const [selectedAuctionType, setSelectedAuctionType] = useState("standard");
   const [filterOn, setFilterOn] = useState(false);
   const [AddProductOn, setAddProductOn] = useState(false);
-  const [auctionData, setAuctionData] = useState([]);
+  const [auctionData, setAuctionData] = useState({});
 
   useEffect(() => {
-    // fetching with standard auction type
-    setAuctionData(data.filter((ele) => ele.auction_type === "standard"));
-  }, []);
+    async function fetchData() {
+      const res = await fetch("/mock.json");
+      const data = await res.json();
+      const filteredData = data.filter(
+        (ele) => ele.bidType === selectedAuctionType
+      );
+      setAuctionData(filteredData);
+    }
+    fetchData();
+  }, [selectedAuctionType]);
+
   const handleFilter = () => {
-    // fetching with filter
-    // setData=fetched data
     setFilterOn(!filterOn);
   };
+
   const handleAddProduct = () => {
-    // Add product
     setAddProductOn(!AddProductOn);
   };
-  const handleNavClick = (a) => {
-    setSelectedAuctionType(a);
-    console.log({ data });
-    setAuctionData(data.filter((ele) => ele.auction_type === a));
+
+  const handleNavClick = async (bidType) => {
+    setSelectedAuctionType(bidType);
   };
+
   return (
     <div className={styles.marketPageBg}>
       {AddProductOn ? (
