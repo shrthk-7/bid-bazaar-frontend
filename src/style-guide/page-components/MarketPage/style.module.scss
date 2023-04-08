@@ -46,8 +46,8 @@
       .navSelected {
         background: radial-gradient(
           circle at bottom right,
-          rgb(95, 30, 148),
-          rgb(153, 85, 207)
+          var(--btn-bg-1),
+          var(--btn-bg-2)
         );
       }
       .navInitail {

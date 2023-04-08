@@ -24,14 +24,16 @@
       display: none;
     }
 
+
     scrollbar-width: none;
+
 
     &::-moz-scrollbar {
       display: none;
     }
     justify-content: space-around;
-    background-color: var(--card-bg1);
-    color: white;
+    // background-color: var(--card-bg1);
+    color: var(--white);
     position: fixed;
     z-index: 2;
     border-radius: 0.5rem;
@@ -47,7 +49,7 @@
     .saveditems {
       font-size: 1.2rem;
       padding: 0.5rem;
-      border-radius: 1rem;
+      border-radius: 0.5rem;
       width: 10rem;
       text-align: center;
       transition-duration: 0.5s;
@@ -70,16 +72,21 @@
       // justify-content: center;
       // position: absolute;
       // background-color: red($color: #000000);
-      bottom: 8vw;
-      left: 14vw;
       // padding-left: 1rem;
-      .currentbids {
-        padding-left: 4rem;
-        // padding-right: 0rem;
-      }
-      .solditems {
-        margin-right: 0rem;
+      width: 100% !important;
+      bottom: 0 !important;
+      justify-content: space-between;
+      gap: 0.5rem;
+
+      .currentbids,
+      .boughtitems,
+      .solditems,
+      .saveditems {
+        font-size: 1rem;
+        min-width: 25%;
+        display: block;
       }
     }
   }
 }
+

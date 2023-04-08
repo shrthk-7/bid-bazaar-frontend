@@ -18,7 +18,7 @@
     // height: 35rem;
     width: min(35rem, 90vw);
     position: absolute;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--module-bg);
     z-index: 5;
     color: var(--white);
     border-radius: 0.5rem;
@@ -48,12 +48,15 @@
         min-width: 10ch;
       }
 
-      input {
+      input,
+      select {
         padding: 0.5rem 1rem;
         outline: none;
         border: none;
         border-radius: 0.3rem;
         font-weight: 500;
+        background: rgb(234, 234, 234);
+        // border: none;
       }
 
       .imageUploaded {
@@ -61,7 +64,7 @@
         min-width: 7rem;
         max-width: 80%;
         object-fit: cover;
-        background: var(--black);
+        background: rgb(234, 234, 234);
         border-radius: 10px;
         display: flex;
         justify-content: flex-start;

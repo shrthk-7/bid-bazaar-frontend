@@ -25,14 +25,30 @@
       color: var(--white);
     }
   }
+  .callToAction {
+    @include mixins.flexCenter;
+    gap: 1rem;
+    .theme {
+      select {
+        outline: none;
+        border: none;
+        font-size: medium;
+        font-weight: bold;
+        padding: 0.5rem;
+        option {
+          color: black !important;
+        }
+      }
+    }
+  }
 }
 
 .btn {
   padding: 0.5rem 1rem;
   background: radial-gradient(
     circle at bottom right,
-    rgb(95, 30, 148),
-    rgb(153, 85, 207)
+    var(--btn-bg-1),
+    var(----btn-bg-2)
   );
   border-radius: 0.3rem;
   cursor: pointer;
@@ -42,8 +58,8 @@
   &:hover {
     background: radial-gradient(
       circle at top right,
-      rgb(95, 30, 148),
-      rgb(153, 85, 207)
+      var(--btn-bg-1),
+      var(----btn-bg-2)
     );
   }
 }
@@ -81,6 +97,16 @@
           text-decoration: none;
           margin: 1.5rem 0;
           color: var(--white);
+        }
+      }
+      .callToAction {
+        @include mixins.flexCenter;
+        flex-direction: column;
+        gap: 1rem;
+        .theme {
+          select {
+            color: black !important;
+          }
         }
       }
     }

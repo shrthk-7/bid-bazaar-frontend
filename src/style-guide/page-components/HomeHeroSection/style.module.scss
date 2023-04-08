@@ -23,7 +23,7 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     border: 2px solid var(--hero-ring-light);
-    box-shadow: 0px 2px 7px 7px black;
+    box-shadow: 0px 2px 7px 7px var(--ring-shadow);
     animation: ringShadowAnimation 2s ease-in-out infinite alternate;
     // animation: hero_ring_motion 2s infinite linear alternate;
   }
@@ -146,6 +146,6 @@
   }
 
   100% {
-    box-shadow: 0px 2px 10px 10px black;
+    box-shadow: 0px 2px 10px 10px va(--ring-shadow);
   }
 }
