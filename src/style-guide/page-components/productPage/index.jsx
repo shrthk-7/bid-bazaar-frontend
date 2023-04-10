@@ -194,7 +194,7 @@ const ProductPage = ({ id }) => {
               <div>
                 <h3>${data.currentHighestBid || 0}</h3>
               </div>
-              <p>{data.currentHighestBidder?.name || "no bids yet"}</p>
+              <p>{data.currentHighestBidder?.name || "Ankan"}</p>
             </div>
             <div className={styles.countDown}>
               <span>Auction Ends in</span>
