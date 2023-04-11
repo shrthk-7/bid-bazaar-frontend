@@ -9,6 +9,7 @@ import { Navigation } from "swiper";
 import { Graph } from "@/style-guide/components/graph";
 import { formatDate } from "@/utils/formatDate";
 import { SocketContext } from "@/context/socket-context";
+import Addbid from "@/style-guide/components/addbid";
 
 const tempData = {
   _id: "643051504188fe9e8eefc7d5",
@@ -93,32 +94,35 @@ const tempData = {
 const ProductPage = ({ id }) => {
   const { socket } = useContext(SocketContext);
   const [timeLeft, setTimeLeft] = useState("loading");
+  const [bidding, setBidding] = useState(false);
 
   const [data, setData] = useState(tempData);
-  let isLive = Date.now() >= data.start && Date.now() <= data.end;
+  let isLive = Date.now() <= new Date(data.end);
   const graphLabels = [];
   const graphData = [];
   data.bidHistory.map((ele) => {
-    graphLabels.push(ele.time);
+    graphLabels.push("");
     graphData.push(ele.bid);
   });
 
-  const keepUpdatingTimeLeft = () => {
-    const timeLeftInMS = new Date(data.end) - Date.now();
-    if (timeLeftInMS <= 0) {
+  const keepUpdatingTimeLeft = (product) => {
+    const presentDate = new Date();
+    const temp = new Date(product?.end || Date.now() + 100000);
+    if (temp.getTime() <= presentDate.getTime()) {
       setTimeLeft("Ended");
       isLive = false;
       return;
     }
+    const timeLeftInMS = temp.getTime() - presentDate.getTime();
     const formattedDate = formatDate(timeLeftInMS);
     setTimeLeft(() => formattedDate);
     setTimeout(() => keepUpdatingTimeLeft(), 60 * 1000);
   };
 
-  const handleNewBid = () => {
+  const handleNewBid = (newBid) => {
+    setBidding(false);
     const userId = localStorage.getItem("_id");
-    if (!userId) return console.log("not found");
-    socket.emit("newBid", userId, id, Date.now());
+    socket.emit("newBid", userId, id, newBid);
   };
 
   const [isLiked, setIsLiked] = useState(false);
@@ -138,15 +142,16 @@ const ProductPage = ({ id }) => {
     if (!socket) return;
     socket.emit("connect-to-room", id);
     socket.on("productinfo", (product) => {
-      console.log(product);
+      // console.log(product);
       setData(product);
+      keepUpdatingTimeLeft(product);
     });
-    keepUpdatingTimeLeft();
     return () => socket.off("productinfo");
   }, [socket]);
 
   return (
     <div className={styles.productPage}>
+      {bidding ? <Addbid handleNewBid={handleNewBid} /> : null}
       <div className={styles.productCard}>
         <div className={styles.productCarousel}>
           <Swiper
@@ -187,16 +192,16 @@ const ProductPage = ({ id }) => {
             <div className={styles.highestBidder}>
               <span>Current Bid</span>
               <div>
-                <h3>${data.currentHighestBid}</h3>
+                <h3>${data.currentHighestBid || 0}</h3>
               </div>
-              <p>{data.currentHighestBidder.name}</p>
+              <p>{data.currentHighestBidder?.name || "Ankan"}</p>
             </div>
             <div className={styles.countDown}>
               <span>Auction Ends in</span>
               <p>{timeLeft}</p>
             </div>
-            <div className={styles.btn} onClick={handleNewBid}>
-              BID
+            <div className={styles.btn} onClick={() => setBidding(true)}>
+              Bid
             </div>
           </div>
           <Graph data={graphData} labels={graphLabels} />

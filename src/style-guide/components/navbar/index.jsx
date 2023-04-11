@@ -20,7 +20,7 @@ const Navbar = ({ mobileHamClicked, setTheme }) => {
         <div className={styles.logo}>BIDBAZZAR</div>
         <div className={styles.nav_links}>
           <Link href="/">HOME</Link>
-          <Link href="/profile">PROFILE</Link>
+          <Link href={`/profile`}>PROFILE</Link>
           <Link href="/market">MARKET</Link>
         </div>
         <div className={styles.callToAction}>

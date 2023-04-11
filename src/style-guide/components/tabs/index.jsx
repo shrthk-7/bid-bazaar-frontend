@@ -1,9 +1,9 @@
 import { React, useState } from "react";
 import style from "./style.module.scss";
-import slides from "../../../../user.json";
+// import slides from "../../../../user.json";
 import Card from "../card";
 
-export default function Tabs() {
+export default function Tabs({ slides }) {
   const [isClicked1, setIsClicked1] = useState(true);
   const [color1, setColor1] = useState("var(--btn-bg-1)");
   const [isClicked2, setIsClicked2] = useState(false);
@@ -88,19 +88,19 @@ export default function Tabs() {
       </div>
       <div className={style.cards}>
         {isClicked1 &&
-          slides.current_bids.map((item) => {
+          slides.listedProducts?.map((item) => {
             return <Card slides={item} />;
           })}
         {isClicked2 &&
-          slides.bought_items.map((item) => {
+          slides.listedProducts?.map((item) => {
             return <Card slides={item} />;
           })}
         {isClicked3 &&
-          slides.saved_products.map((item) => {
+          slides.currentBids?.map((item) => {
             return <Card slides={item} />;
           })}
         {isClicked4 &&
-          slides.sold_items.map((item) => {
+          slides.listedProducts?.map((item) => {
             return <Card slides={item} />;
           })}
       </div>

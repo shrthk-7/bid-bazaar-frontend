@@ -38,6 +38,7 @@ const AddProduct = ({ AddProductOn, setAddProductOn, bidType }) => {
     } catch (error) {
       console.log({ error });
       alert("product creation failed");
+      setLoading(false);
     }
   };
 
