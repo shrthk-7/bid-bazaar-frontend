@@ -1,11 +1,10 @@
 import React from "react";
 import style from "./style.module.scss";
-// import slides from "../../../../user.json";
 import {
   SlSocialInstagram,
   SlSocialLinkedin,
   SlSocialTwitter,
-} from "react-icons/Sl";
+} from "react-icons/sl";
 
 export default function Profilecard({ slides }) {
   return (
