@@ -10,6 +10,7 @@ import { Graph } from "@/style-guide/components/graph";
 import { formatDate } from "@/utils/formatDate";
 import { SocketContext } from "@/context/socket-context";
 import Addbid from "@/style-guide/components/addbid";
+import Events from "@/utils/socketEvents";
 
 const tempData = {
   _id: "643051504188fe9e8eefc7d5",
@@ -91,7 +92,7 @@ const tempData = {
   ],
 };
 
-const ProductPage = ({ id }) => {
+const ProductPage = ({ productId }) => {
   const { socket } = useContext(SocketContext);
   const [timeLeft, setTimeLeft] = useState("loading");
   const [bidding, setBidding] = useState(false);
@@ -122,7 +123,7 @@ const ProductPage = ({ id }) => {
   const handleNewBid = (newBid) => {
     setBidding(false);
     const userId = localStorage.getItem("_id");
-    socket.emit("newBid", userId, id, newBid);
+    socket.emit(Events.newBid, { userId, productId, newBid });
   };
 
   const [isLiked, setIsLiked] = useState(false);
@@ -135,18 +136,21 @@ const ProductPage = ({ id }) => {
       else setReputation((rep) => rep + 1);
       return !prevState;
     });
-    socket.emit("Like-event", userId, id, event);
+    socket.emit(Events.likeProduct, {
+      userId,
+      productId,
+      isLiked: event,
+    });
   };
 
   useEffect(() => {
     if (!socket) return;
-    socket.emit("connect-to-room", id);
-    socket.on("productinfo", (product) => {
-      // console.log(product);
+    socket.emit(Events.connectToRoom, { productId });
+    socket.on(Events.productInfo, (product) => {
       setData(product);
       keepUpdatingTimeLeft(product);
     });
-    return () => socket.off("productinfo");
+    return () => socket.off(Events.productInfo);
   }, [socket]);
 
   return (

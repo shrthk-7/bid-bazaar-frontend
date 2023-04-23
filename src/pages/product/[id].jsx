@@ -18,7 +18,7 @@ const Product = () => {
 
   return (
     <SocketContext.Provider value={{ socket: socket }}>
-      <ProductPage id={id} />
+      <ProductPage productId={id} />
     </SocketContext.Provider>
   );
 };
